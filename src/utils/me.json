@@ -1,0 +1,161 @@
+{
+  "me": {
+    "skills": [
+      {
+        "name": "TypeScript",
+        "iconuri": "",
+        "description": "",
+        "category": ["language"]
+      },
+      {
+        "name": "JavaScript",
+        "iconuri": "",
+        "description": "",
+        "category": ["language"]
+      },
+      {
+        "name": "Java",
+        "iconuri": "",
+        "description": "",
+        "category": ["language"]
+      },
+      {
+        "name": "HTML",
+        "iconuri": "",
+        "description": "",
+        "category": ["language", "frontend"]
+      },
+      {
+        "name": "CSS",
+        "iconuri": "",
+        "description": "",
+        "category": ["language", "frontend"]
+      },
+      {
+        "name": "React",
+        "iconuri": "",
+        "description": "",
+        "category": ["frontend", "framework"]
+      },
+      {
+        "name": "Angular",
+        "iconuri": "",
+        "description": "",
+        "category": ["frontend", "framework"]
+      },
+      {
+        "name": "Nextjs",
+        "iconuri": "",
+        "description": "",
+        "category": ["frontend", "framework"]
+      },
+      {
+        "name": "Tailwind",
+        "iconuri": "",
+        "description": "",
+        "category": ["frontend", "framework"]
+      },
+      {
+        "name": "Bootsrap",
+        "iconuri": "",
+        "description": "",
+        "category": ["frontend", "framework"]
+      },
+
+      {
+        "name": "Materialuo",
+        "iconuri": "",
+        "description": "",
+        "category": ["frontend", "framework"]
+      },
+      {
+        "name": "Spring",
+        "iconuri": "",
+        "description": "",
+        "category": ["backend", "framework"]
+      },
+      {
+        "name": "Nodejs",
+        "iconuri": "",
+        "description": "",
+        "category": ["backend", "framework"]
+      },
+      {
+        "name": "Nestjs",
+        "iconuri": "",
+        "description": "",
+        "category": ["backend", "framework"]
+      },
+      {
+        "name": "Git",
+        "iconuri": "",
+        "description": "",
+        "category": ["tools"]
+      },
+      {
+        "name": "Github",
+        "iconuri": "",
+        "description": "",
+        "category": ["tools"]
+      },
+      {
+        "name": "Docker",
+        "iconuri": "",
+        "description": "",
+        "category": ["tools"]
+      },
+      {
+        "name": "Github",
+        "iconuri": "",
+        "description": "",
+        "category": ["tools"]
+      },
+      {
+        "name": "MongoDB",
+        "iconuri": "",
+        "description": "",
+        "category": ["database"]
+      },
+      {
+        "name": "Sql",
+        "iconuri": "",
+        "description": "",
+        "category": ["database"]
+      }
+    ],
+    "Study": [
+      {
+        "name": "High School",
+        "fieldname": "Electrotechnics, Communicating Equipment",
+        "schoolname": "High School Mohammed V | Marrakech",
+        "delay": "09/2016 - 07/2019"
+      },
+      {
+        "name": "Bachelor Degree",
+        "field": "Computer Science",
+        "schoolname": "Cadi Ayyad | Faculty of sciences and technologies | Marrakech",
+        "delay": "09/2019 - 07/2022"
+      },
+      {
+        "name": "Master Degree",
+        "field": "ARTIFICIAL INTELLIGENCE AND COMPUTER ENGINEERING",
+        "schoolname": "Cadi Ayyad | Faculty of sciences and technologies | Marrakech",
+        "delay": "09/2023 - 07/2025"
+      }
+    ],
+    "Experiences": [
+      {
+        "title": "FullStack developer",
+        "where": "Alidantik Company",
+        "type": "Internship",
+        "delay": "06/2023 - 12/2023"
+      },
+      {
+        "title": "FullStack developer",
+        "where": "Alidantik Company",
+        "type": "Internship",
+        "delay": "04/2022 - 06/2022"
+      }
+    ]
+  }
+}

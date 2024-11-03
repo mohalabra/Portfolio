@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.first_slide_img{
+    width: "150px";
+    height: "350px";
+}
+
+@media (min-width: 960px) {
+    .first_slide_img{
+        width: "450px";
+        height: "650px";
+    }
+}
