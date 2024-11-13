@@ -2,7 +2,7 @@
 
 import React from "react";
 import Box from "@mui/material/Box";
-import { Typography, useTheme, Grid } from "@mui/material";
+import { Typography, Grid } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 import {
   ExperiencesCards,
@@ -16,7 +16,6 @@ import StudyCards from "@/src/components/home/StudyCards";
 import ScrollGif from "@/src/components/ScrollGif";
 
 function Home() {
-  const theme = useTheme();
   return (
     <Box>
       {/* Welcopme message */}
@@ -39,11 +38,15 @@ function Home() {
 
       {/* Formations */}
       <Box mb={6}>
-        <Section title={"FORMATION"} theme={theme}>
+        <Section title={"FORMATION"}>
           <Grid container gap={2} justifyContent="space-evenly">
             {/* Gif */}
             <Grid item md={5} xs={12} className="place-items-center">
-              <img src="/gifs/studying-study.gif" alt="Study Gif" className="pt-3" />
+              <img
+                src="/gifs/studying-study.gif"
+                alt="Study Gif"
+                className="pt-3"
+              />
             </Grid>
             {/*  */}
             <Grid item md={6} xs={12}>
@@ -61,7 +64,7 @@ function Home() {
 
       {/* WORK EXPERIENCE */}
       <Box mb={6}>
-        <Section title={"WORK EXPERIENCE"} theme={theme}>
+        <Section title={"WORK EXPERIENCE"}>
           <Grid container gap={2} justifyContent="space-evenly">
             {/* Experiences */}
             <Grid item md={6} xs={12}>
@@ -72,8 +75,8 @@ function Home() {
               <img
                 src="/Laptop.svg"
                 alt="Laptop svg"
-                width={"500px"}
-                height={"500px"}
+                width={"600px"}
+                height={"600px"}
               />
             </Grid>
           </Grid>
@@ -87,7 +90,7 @@ function Home() {
 
       {/* Projects */}
       <Box mb={6}>
-        <Section title={"PROJECTS"} theme={theme}>
+        <Section title={"PROJECTS"}>
           <Grid container gap={2} justifyContent="space-evenly">
             <ProjectsCards />
           </Grid>

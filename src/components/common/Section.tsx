@@ -1,13 +1,14 @@
-import { Box, Container, Theme, Typography } from "@mui/material";
+"use client"
+import { Box, Container, Typography, useTheme } from "@mui/material";
 import React, { ReactNode } from "react";
 
 interface SectionInterface {
   title: String;
   children: ReactNode;
-  theme: Theme;
 }
 
-const Section = ({ title, children, theme }: SectionInterface) => {
+const Section = ({ title, children }: SectionInterface) => {
+  const theme = useTheme();
   return (
     <Container maxWidth={"xl"}>
       <Box

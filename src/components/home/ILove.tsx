@@ -40,11 +40,11 @@ const ILove = () => {
           </Typography>
 
           <div className="w-full lg:max-w-[65%]">
-            <Grid container gap={2}>
+            <Grid container gap={2} alignItems="stretch">
               {ilove.map((item, index) => (
                 <Grid item xs={5} md={4} lg={3} key={index}>
                   <div
-                    className="bg-blue-500 w-full p-4 rounded-xl"
+                    className="bg-blue-500 w-full p-4 rounded-xl h-full"
                     style={{ opacity: "85%" }}
                   >
                     <img
@@ -54,6 +54,7 @@ const ILove = () => {
                       height="60px"
                       className="mb-4"
                     />
+
                     <Typography variant="body2" color="white">
                       {item.title}
                     </Typography>

@@ -11,3 +11,5 @@ export { default as ILove } from "./home/ILove";
 export { default as ExperiencesCards } from "./home/ExperiencesCards";
 export { default as Skills } from "./home/Skills";
 export { default as ProjectsCards } from "./home/ProjectsCards";
+export { default as Achievements } from "./sport/Achievements";
+export { default as ImageGallery } from "./sport/ImageGallery";

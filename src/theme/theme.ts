@@ -11,7 +11,7 @@ const sharedTheme: ThemeOptions = {
     },
   },
   typography: {
-    fontFamily: '"Playwrite DE Grund", cursive',
+    fontFamily: '"Playwrite DE Grund", serif',
     fontSize: 16,
     h1: {
       fontSize: "2rem",

@@ -69,6 +69,7 @@ const Skills = () => {
       >
         My Skills
       </Typography>
+
       <Grid
         container
         direction="row"
@@ -83,18 +84,18 @@ const Skills = () => {
             key={__index}
             item
             xs={12}
-            md={5}
+            md={4}
             xl={3}
-            className="bg-blue-300 px-6 py-4 rounded-3xl shadow-md shadow-gray-500 cursor-pointer hover:animate-scale"
+            className="bg-blue-300 px-3 py-5 rounded-3xl shadow-md shadow-gray-500 cursor-pointer hover:animate-scale"
           >
-            <div className="flex gap-6 ">
+            <div className="flex gap-4">
               <img
                 src={`/skills/${skill.icon}`}
                 alt={skill.title}
                 className="w-12 h-12 md:w-16 md:h-16"
               />
               <div className="flex-col">
-                <Typography variant="body1" fontWeight={"bold"} mb={2}>
+                <Typography variant="body1" fontWeight={"bold"} mb={1}>
                   {skill.title}
                 </Typography>
                 <div className="flex w-full flex-wrap">
