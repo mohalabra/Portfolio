@@ -99,8 +99,8 @@ const Skills = () => {
                   {skill.title}
                 </Typography>
                 <div className="flex w-full flex-wrap">
-                  {skill.a.map((item) => (
-                    <p className="text-xs md:text-sm bg-blue-700 bg-opacity-40 my-2 px-4 py-2 text-blue-950 font-bold rounded-3xl mx-2">
+                  {skill.a.map((item, _index) => (
+                    <p className="text-xs md:text-sm bg-blue-700 bg-opacity-40 my-2 px-4 py-2 text-blue-950 font-bold rounded-3xl mx-2" key={_index}>
                       {item}
                     </p>
                   ))}

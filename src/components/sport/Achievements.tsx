@@ -10,15 +10,15 @@ import { Typography, Box } from "@mui/material";
 
 const achievements = [
   {
-    year: "2021",
+    year: "Nov 2021",
     title: "International Jiu-Jitsu Open",
     location: "Abu Dhabi - United Arab Emirates",
-    division: "-69 KG",
+    division: "-69 KG ~ Gi",
     highlights:
       "Competing internationally was a dream come true. Facing athletes from around the world pushed me beyond my limits and inspired me to take my training to the next level.",
   },
   {
-    year: "2018",
+    year: "Mars 2018",
     title: "National Jiu-Jitsu Championship",
     location: "Agadir-Morocco",
     result: "Gold Medal",
@@ -27,11 +27,20 @@ const achievements = [
       "This was my first major national event, and it was a great experience competing against some of the top athletes in the country.",
   },
   {
+    year: "Mars 2018",
+    title: "National Jiu-Jitsu Championship",
+    location: "Agadir-Morocco",
+    result: "Gold Medal",
+    division: "-66 KG ~ No Gi",
+    highlights:
+      "This was my first major national event, and it was a great experience competing against some of the top athletes in the country.",
+  },
+  {
     year: "July 2017",
     title: "National Jiu-Jitsu Championship",
     location: "Rabat-Morocco",
     result: "Gold Medal",
-    division: "-66 KG",
+    division: "-66 KG ~ Gi",
     highlights:
       "This was my first major national event, and it was a great experience competing against some of the top athletes in the country.",
   },

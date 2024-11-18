@@ -40,9 +40,10 @@ const HeaderItems = () => {
 
   const isActive = (path: string) => {
     return pathname === path
-      ? "text-white font-semibold bg-black px-2 py-1 after:scale-x-100 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
-      : "hover:text-white hover:bg-black hover:px-2 hover:py-1 ";
+      ? "text-white font-semibold bg-black px-3 py-2 after:scale-x-100 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+      : "hover:text-white hover:bg-black hover:scale-105 hover:transition-transform hover:duration-300 hover:px-2 hover:py-1";
   };
+
   return (
     <Box>
       {/* Computer Header */}

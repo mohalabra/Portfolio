@@ -1,4 +1,5 @@
 import { Achievements, ImageGallery, Section } from "@/src/components";
+import VideoGrid from "@/src/components/sport/VideoGrid";
 import VideoPlayer from "@/src/components/sport/VideoPlayer";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
@@ -48,15 +49,17 @@ const Sport = () => {
         </div>
       </Box>
 
-      {/* <div className="flex justify-center items-center bg-gray-100 p-4">
-        <video className="rounded-lg shadow-lg" controls width="600">
-          <source src="path-to-your-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> */}
-
       <Box mb={6}>
-        <VideoPlayer />
+        <Typography
+          variant="h1"
+          textAlign="center"
+          textTransform={"capitalize"}
+          fontWeight={"bold"}
+          mb={4}
+        >
+          Videos
+        </Typography>
+        <VideoGrid />
       </Box>
 
       <Box mb={6}>
@@ -67,7 +70,7 @@ const Sport = () => {
           fontWeight={"bold"}
           mb={4}
         >
-          Achievements
+          Gallery
         </Typography>
         <ImageGallery />
       </Box>
