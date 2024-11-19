@@ -14,6 +14,8 @@ import {
 } from "../src/components";
 import StudyCards from "@/src/components/home/StudyCards";
 import ScrollGif from "@/src/components/ScrollGif";
+import { projects } from "@/src/utils/Constants";
+import Link from "next/link";
 
 function Home() {
   return (
@@ -91,9 +93,15 @@ function Home() {
       {/* Projects */}
       <Box mb={6}>
         <Section title={"PROJECTS"}>
-          <Grid container gap={2} justifyContent="space-evenly">
-            <ProjectsCards />
-          </Grid>
+          <ProjectsCards projects={projects.slice(0, 3)} />
+          <div className="m-5 text-center">
+            <a
+              href="/projects"
+              className="underline"
+            >
+              See More ...
+            </a>
+          </div>
         </Section>
       </Box>
 

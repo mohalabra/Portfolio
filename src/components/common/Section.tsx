@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { Box, Container, Typography, useTheme } from "@mui/material";
 import React, { ReactNode } from "react";
 
 interface SectionInterface {
-  title: String;
+  title?: String;
   children: ReactNode;
 }
 
@@ -29,13 +29,15 @@ const Section = ({ title, children }: SectionInterface) => {
             alignItems: "end",
           }}
         >
-          <Typography
-            variant="h1"
-            color="palette.primary"
-            sx={{ fontWeight: 900, letterSpacing: "5px" }}
-          >
-            {title}
-          </Typography>
+          {title && (
+            <Typography
+              variant="h1"
+              color="palette.primary"
+              sx={{ fontWeight: 900, letterSpacing: "5px" }}
+            >
+              {title}
+            </Typography>
+          )}
         </Box>
 
         {children}

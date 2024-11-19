@@ -3,16 +3,14 @@ import React from "react";
 
 const skills = [
   {
-    title: "Artificial Intelligence",
-    icon: "ai.png",
-    a: [
-      "Machine Learning",
-      "Deep Learning",
-      "Computer Vesion",
-      "Data Analysis",
-      "Recommendation Systems",
-      "Reinforcement Learning",
-    ],
+    title: "Data storage and caching",
+    icon: "database-storage.png",
+    a: ["MongoDB", "Redis", "MySQL", "PostgreSQL", "SQLite"],
+  },
+  {
+    title: "Devops",
+    icon: "social.png",
+    a: ["Docker", "Git / Github", "CI/CD", "Scrum"],
   },
   {
     title: "Client UI/UX",
@@ -24,6 +22,18 @@ const skills = [
       "React Native",
       "Flutter",
       "Tailwind Css",
+    ],
+  },
+  {
+    title: "Artificial Intelligence",
+    icon: "ai.png",
+    a: [
+      "Machine Learning",
+      "Deep Learning",
+      "Computer Vesion",
+      "Data Analysis",
+      "Recommendation Systems",
+      "Reinforcement Learning",
     ],
   },
   {
@@ -40,16 +50,6 @@ const skills = [
       "Spring",
       "Django",
     ],
-  },
-  {
-    title: "Data storage and caching",
-    icon: "database-storage.png",
-    a: ["MongoDB", "Redis", "MySQL", "PostgreSQL", "SQLite"],
-  },
-  {
-    title: "Devops",
-    icon: "social.png",
-    a: ["Docker", "Git / Github", "CI/CD", "Scrum"],
   },
 ];
 
@@ -100,7 +100,10 @@ const Skills = () => {
                 </Typography>
                 <div className="flex w-full flex-wrap">
                   {skill.a.map((item, _index) => (
-                    <p className="text-xs md:text-sm bg-blue-700 bg-opacity-40 my-2 px-4 py-2 text-blue-950 font-bold rounded-3xl mx-2" key={_index}>
+                    <p
+                      className="text-xs md:text-sm bg-blue-700 bg-opacity-40 my-2 px-4 py-2 text-blue-950 font-bold rounded-3xl mx-2"
+                      key={_index}
+                    >
                       {item}
                     </p>
                   ))}

@@ -15,9 +15,18 @@ export interface ExperienceType {
   tools: string;
 }
 
+type DescriptionType = {
+  title?: string;
+  subtitle?: string;
+  content?: string;
+  images?: string[];
+};
+
 export type ProjectType = {
+  id: string;
   title: string;
-  videos: { order: number; url: string }[];
-  descriptions: { order: number; content: string }[];
-  images: { order: number; url: string }[];
+  images: string[];
+  video?: string;
+  description: Array<DescriptionType>;
+  date: string;
 };
