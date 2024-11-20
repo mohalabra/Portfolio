@@ -1,82 +1,86 @@
-import React from "react";
-import ThemeToggle from "../../theme/ThemeToggle";
-import {
-  Box,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import useScreenSize from "@/src/hooks/useScreenSize";
+"use client"
+
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { MenuItems } from "@/src/utils/Constants";
+import ThemeToggle from "../../theme/ThemeToggle";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const MobileHeader = () => {
-  const [openDrawer, setOpenDrawer] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleDrawer = (event: React.KeyboardEvent | React.MouseEvent) => {
-    if (
-      event.type === "keydown" &&
-      ((event as React.KeyboardEvent).key === "Tab" ||
-        (event as React.KeyboardEvent).key === "Shift")
-    ) {
-      return;
-    }
-    setOpenDrawer(!openDrawer);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const list = () => (
-    <Box
-      role="presentation"
-      onClick={toggleDrawer}
-      onKeyDown={toggleDrawer}
-    >
-      <Box sx={{ textAlign: "end", p: 2 }}>
-        <IconButton
-          size="large"
-          edge="start"
-          onClick={() => setOpenDrawer(false)}
-        >
-          <CloseIcon />
-        </IconButton>
-      </Box>
-      <List>
-        {MenuItems.map((page, index) => (
-          <ListItem key={index} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <page.icon />
-              </ListItemIcon>
-              <ListItemText primary={page.name} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+  const menuVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: { duration: 0.2 },
+    },
+  };
+
   return (
-    <React.Fragment>
+    <header className="flex items-center justify-between p-4">
       {/* Theme Toggle */}
       <ThemeToggle />
 
-      <IconButton
-        size="large"
-        edge="start"
-        color="inherit"
-        aria-label="menu"
-        onClick={toggleDrawer}
+      {/* Hamburger Menu Icon */}
+      <button
+        className="text-2xl md:hidden focus:outline-none"
+        onClick={toggleMenu}
       >
-        <MenuIcon />
-      </IconButton>
+        {isMenuOpen ? <FiX /> : <FiMenu />}
+      </button>
 
-      <Drawer anchor={"right"} open={openDrawer} onClose={toggleDrawer}>
-        {list()}
-      </Drawer>
-    </React.Fragment>
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="absolute top-14 right-0 w-64 bg-gray-700 text-white shadow-lg rounded-lg z-50"
+          >
+            <ul className="flex flex-col space-y-2 p-4">
+              {MenuItems.map((item, index) => (
+                <li key={index} className="hover:text-gray-300">
+                  <a href={item.to} className="flex items-center space-x-2">
+                    <item.icon />
+                    <span>{item.name}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Desktop Menu (hidden on small screens) */}
+      <nav className="hidden md:flex space-x-6">
+        {MenuItems.map((item, index) => (
+          <a
+            key={index}
+            href={item.to}
+            className="hover:text-gray-300 flex items-center space-x-2"
+          >
+            <item.icon />
+            <span>{item.name}</span>
+          </a>
+        ))}
+      </nav>
+    </header>
   );
 };
 

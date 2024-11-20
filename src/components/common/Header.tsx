@@ -39,9 +39,15 @@ const HeaderItems = () => {
   const pathname = usePathname();
 
   const isActive = (path: string) => {
-    return pathname === path
+    if (path === "/") {
+      return pathname === "/"
+        ? "text-white font-semibold bg-black px-3 py-2 after:scale-x-100 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+        : "hover:text-white hover:bg-black hover:scale-105 hover:transition-transform hover:duration-300 hover:px-3 hover:py-2";
+    }
+
+    return pathname.startsWith(path)
       ? "text-white font-semibold bg-black px-3 py-2 after:scale-x-100 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
-      : "hover:text-white hover:bg-black hover:scale-105 hover:transition-transform hover:duration-300 hover:px-2 hover:py-1";
+      : "hover:text-white hover:bg-black hover:scale-105 hover:transition-transform hover:duration-300 hover:px-3 hover:py-2";
   };
 
   return (

@@ -7,8 +7,8 @@ import { ProjectType } from "../types/types";
 export const MenuItems = [
   { name: "Home", to: "/", icon: HomeIcon },
   { name: "Sport", to: "/sport", icon: SportsGymnasticsIcon },
+  { name: "Projects", to: "/projects", icon: AlternateEmailIcon },
   { name: "About Me", to: "/about-me", icon: InfoIcon },
-  { name: "Contact", to: "/contact", icon: AlternateEmailIcon },
 ];
 
 export const projects: ProjectType[] = [
@@ -16,10 +16,10 @@ export const projects: ProjectType[] = [
     id: "under-water-image-processing",
     title: "Under Water Image Processing",
     images: [
-      "under_water_1.png",
-      "under_water_2.png",
-      "under_water_3.png",
-      "under_water_3.png",
+      "underwater/under_water_1.png",
+      "underwater/under_water_2.png",
+      "underwater/under_water_3.png",
+      "underwater/under_water_3.png",
     ],
     video: "https://youtu.be/jLNnxGcJnAs?si=eTOQWXXZ8LT-EQ2f",
     description: [
@@ -32,25 +32,97 @@ export const projects: ProjectType[] = [
         subtitle: "Approach 1",
         content:
           "The first approach involves initial enhancements to both contrast and white balance. For contrast, the image is converted to grayscale followed by histogram equalization. For white balance, corrections are made based on the gray world method, which assumes that the average of all colors in a scene naturally tends towards gray over the entire image. This is particularly useful in underwater settings where color casts can be prevalent due to varying depths and water conditions.",
-        images: ["/projects/underwater_approach1.png"],
+        images: ["/projects/underwater/underwater_approach1.png"],
       },
       {
         subtitle: "Approach 2",
         content:
           "The second approach focuses on adaptive contrast enhancement and color normalization. Unlike traditional methods, this technique utilizes Contrast Limited Adaptive Histogram Equalization (CLAHE), which prevents over-amplification of noise by limiting contrast enhancement in homogeneous areas of the image. Additionally, color normalization adjusts each color channel to its 99th percentile, ensuring that the brightest colors are adjusted to pure white. This method effectively reduces the typical bluish or greenish cast seen in underwater images, leading to more natural and accurate color representation.",
-        images: ["/projects/underwater_approach2.png"],
+        images: ["/projects/underwater/underwater_approach2.png"],
       },
     ],
     date: "2024",
   },
   {
+    id: "iot-smart-home",
+    title: "IOT Smart Home Project",
+    images: [
+      "iot/iot_1.jpg",
+      "iot/iot_2.jpg",
+      "iot/iot_3.jpg",
+      "iot/iot_4.jpg",
+      "iot/iot_5.jpg",
+      "iot/iot_6.jpg",
+      "iot/iot_7.jpg",
+      "iot/iot_8.jpg",
+      "iot/iot_9.jpg",
+      "iot/iot_10.jpg",
+      "iot/iot_11.jpg",
+    ],
+    video: "https://www.youtube.com/watch?v=c-O99odUCnw",
+    description: [
+      {
+        title: "Description",
+        content:
+          "I developed a smart home system using various <b>sensors</b> and the <b>DOIT ESP32 Dev Kit V1</b>. This project aims to enhance home <b>automation</b> and <b>safety</b> through real-time monitoring and <b>control</b>. Here's an overview:",
+      },
+      {
+        subtitle: "🔧 Components & Features :",
+        content:
+          "- <b>Kitchen:</b> Equipped with a gas sensor and an IR sensor to monitor and detect any hazardous conditions.",
+      },
+      {
+        content:
+          " - <b>Bedroom:</b> Integrated with a DHT11 sensor for temperature and humidity monitoring.",
+      },
+      {
+        content:
+          "- <b>Outdoor Lighting:</b> Controlled using a PIR sensor to ensure energy efficiency and security.",
+      },
+      {
+        content:
+          "- <b>Water Level Monitoring:</b> An ultrasonic sensor is used to monitor water levels in tanks or reservoirs to prevent overflow or ensure adequate water supply.",
+      },
+      {
+        subtitle: "🖥️ Microcontroller :",
+        content:
+          "- Utilized the <b>ESP32 Dev Kit V1</b> to interface with all sensors and manage data transmission.",
+        images: ["/projects/iot/esp32.png"],
+      },
+      {
+        subtitle: "📱 Mobile Application Development :",
+        content:
+          "- Developed a mobile app connected to a <b>Node.js API</b>, allowing seamless interaction with the smart home system.",
+      },
+      {
+        subtitle: "📊 Data Flow :",
+        content:
+          "- <b>From Sensors to Microcontroller:</b> Data is collected by the sensors and sent to the ESP32 microcontroller.",
+      },
+      {
+        content:
+          "- <b>From Microcontroller to Node.js Server:</b> The ESP32 processes the sensor data and sends it to the Node.js server via APIs.",
+      },
+      {
+        content:
+          "- <b>From Node.js Server to Mobile Application:</b> The server processes and stores the data, which the mobile application can then access to provide real-time monitoring and control to the users.",
+        images: ["/projects/iot/iot_architecture.png"],
+      },
+      {
+        content:
+          "This project demonstrates the potential of IoT in creating smarter and safer living environments. I'm thrilled to see how this technology can be further developed and applied in real-world scenarios.",
+      },
+    ],
+    date: "2023",
+  },
+  {
     id: "dijkstra-algo",
     title: "Dijkstra's Algorithm",
     images: [
-      "dijkstra1.png",
-      "dijkstra2.png",
-      "dijkstra3.png",
-      "dijkstra4.png",
+      "dijkstra/dijkstra1.png",
+      "dijkstra/dijkstra2.png",
+      "dijkstra/dijkstra3.png",
+      "dijkstra/dijkstra4.png",
     ],
     video: "https://www.youtube.com/watch?v=mRDQdROjkd0",
     description: [
@@ -74,11 +146,11 @@ export const projects: ProjectType[] = [
     id: "iris-classification",
     title: "IRIS Classification",
     images: [
-      "irsi_1.png",
-      "irsi_2.png",
-      "irsi_3.png",
-      "irsi_4.png",
-      "irsi_5.png",
+      "irsi/irsi_1.png",
+      "irsi/irsi_2.png",
+      "irsi/irsi_3.png",
+      "irsi/irsi_4.png",
+      "irsi/irsi_5.png",
     ],
     video: "https://youtu.be/fEiU9FSW5RI",
     description: [
@@ -101,20 +173,6 @@ export const projects: ProjectType[] = [
       },
     ],
     date: "2023",
-  },
-  {
-    id: "dijkstra-algo",
-    title: "Dijkstra's Algorithm",
-    images: [
-      "irsi_1.png",
-      "irsi_2.png",
-      "irsi_3.png",
-      "irsi_4.png",
-      "irsi_5.png",
-    ],
-    video: "https://youtu.be/jLNnxGcJnAs?si=KnToYT9K0unLQCIF",
-    description: [],
-    date: "2022",
   },
 ];
 

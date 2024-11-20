@@ -18,8 +18,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Section } from "@/src/components";
+import { ProjectsCards, Section } from "@/src/components";
 import notFound from "@/app/not-found";
+import ProjectCarousel from "@/src/components/projects/ProjectCarousel";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -76,6 +77,7 @@ const ProjectPage = () => {
                     pl={2}
                     fontWeight={"bold"}
                     color="textSecondary"
+                    mb={2}
                   >
                     {desc.subtitle}
                   </Typography>
@@ -85,7 +87,7 @@ const ProjectPage = () => {
                   variant="body1"
                   maxWidth={"1200px"}
                   pl={desc.title ? 2 : 4}
-                  mb={4}
+                  mb={3}
                   dangerouslySetInnerHTML={{
                     __html: desc.content || "",
                   }}
@@ -157,13 +159,30 @@ const ProjectPage = () => {
           </Section>
         </Box>
 
-        <Typography variant="h2" textAlign={"center"} my={5} gutterBottom>
-          Other Project
-        </Typography>
+        <Box mb={6}>
+          <Typography variant="h2" textAlign={"center"} my={5} gutterBottom>
+            Other Project
+          </Typography>
+          <ProjectsCards
+            projects={projects.filter((item) => item.id !== id).slice(0, 3)}
+          />
+        </Box>
 
         {/* Image Modal (Popup) */}
-        <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
-          <DialogContent>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+          maxWidth="lg"
+          fullWidth
+          disableScrollLock
+        >
+          <DialogContent
+            sx={{
+              maxHeight: "calc(100vh - 64px)",
+              overflow: "hidden",
+              position: "relative",
+            }}
+          >
             <IconButton
               edge="end"
               color="inherit"
@@ -172,7 +191,7 @@ const ProjectPage = () => {
               sx={{
                 position: "absolute",
                 right: 8,
-                top: 8,
+                top: 3,
               }}
             >
               <CloseIcon />
@@ -180,7 +199,12 @@ const ProjectPage = () => {
             <img
               src={`/projects/${selectedImage}`}
               alt={project.title}
-              style={{ width: "100%", height: "auto" }}
+              style={{
+                width: "100%",
+                height: "auto",
+                maxHeight: "calc(100vh - 100px)",
+                objectFit: "contain",
+              }}
             />
           </DialogContent>
         </Dialog>
