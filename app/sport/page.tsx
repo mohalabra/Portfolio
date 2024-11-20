@@ -1,6 +1,5 @@
 import { Achievements, ImageGallery, Section } from "@/src/components";
 import VideoGrid from "@/src/components/sport/VideoGrid";
-import VideoPlayer from "@/src/components/sport/VideoPlayer";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
