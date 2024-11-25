@@ -20,7 +20,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { ProjectsCards, Section } from "@/src/components";
 import notFound from "@/app/not-found";
-import ProjectCarousel from "@/src/components/projects/ProjectCarousel";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -33,8 +32,7 @@ const ProjectPage = () => {
   const project = projects.find((item) => item.id === id);
 
   if (!project) {
-    notFound();
-    return;
+    return notFound();
   }
 
   const [open, setOpen] = useState(false);
@@ -105,27 +103,29 @@ const ProjectPage = () => {
         </div>
 
         {/* video */}
-        <Box mb={6}>
-          <Section title="Watch Video">
-            <div className="flex flex-col items-center">
-              <div className="sm:w-[100%] sm:h-[400px] md:w-[80%] md:h-[500px] lg:w-[70%] lg:h-[600px]">
-                {isMounted ? (
-                  <ReactPlayer
-                    url={project.video}
-                    controls
-                    width="100%"
-                    height="100%"
-                  />
-                ) : (
-                  <div>Loading video...</div>
-                )}
+        {project.video && (
+          <Box mb={6}>
+            <Section title="Watch Video">
+              <div className="flex flex-col items-center">
+                <div className="sm:w-[100%] sm:h-[400px] md:w-[80%] md:h-[500px] lg:w-[70%] lg:h-[600px]">
+                  {isMounted ? (
+                    <ReactPlayer
+                      url={project.video}
+                      controls
+                      width="100%"
+                      height="100%"
+                    />
+                  ) : (
+                    <div>Loading video...</div>
+                  )}
+                </div>
               </div>
-            </div>
-          </Section>
-        </Box>
+            </Section>
+          </Box>
+        )}
 
         {/* Images */}
-        <Box mb={6}>
+        <Box my={6}>
           <Section title="Images">
             <Swiper
               slidesPerView={1}

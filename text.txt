@@ -1,0 +1,14 @@
+About Me
+Hello! I’m Mohamed Labrassi, a passionate and driven software engineer specializing in AI, machine learning, and web development. I’m currently pursuing a Master’s degree in Artificial Intelligence and Computer Engineering, where I’m deeply engaged in research and projects that combine innovation with practical solutions.
+
+My journey in tech has been fueled by a strong interest in creating impactful software solutions. I enjoy working on projects that involve data analysis, generative AI, and IoT systems, as well as building dynamic and user-friendly web and mobile applications using ReactJS, Next.js, Django, and Flutter.
+
+What I Do
+AI and Machine Learning: I design and implement intelligent systems, ranging from recommender systems to computer vision applications like aerial and underwater image processing.
+Web Development: I build scalable and interactive platforms with a focus on user experience, leveraging frameworks like React and Tailwind CSS.
+IoT and Smart Systems: I develop connected devices for real-world applications, such as health monitoring and smart home automation.
+Project Leadership: As a Scrum Master, I guide teams to deliver efficient and effective solutions.
+My Vision
+I believe technology is a powerful tool to solve complex problems and improve everyday life. My goal is to use my skills to create meaningful and accessible solutions that make a difference. Whether it's through developing smarter algorithms, crafting seamless user interfaces, or mentoring teams, I am always striving for excellence.
+
+When I’m not coding, you can find me exploring new technologies, brainstorming innovative ideas, or enjoying the cultural beauty of Marrakech.

@@ -67,7 +67,7 @@ const Skills = () => {
           textAlign: "center",
         }}
       >
-        My Skills
+        {"My Skills".toUpperCase()}
       </Typography>
 
       <Grid

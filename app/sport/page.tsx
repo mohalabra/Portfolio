@@ -1,7 +1,22 @@
-import { Achievements, ImageGallery, Section } from "@/src/components";
-import VideoGrid from "@/src/components/sport/VideoGrid";
-import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Box, Container, Typography } from "@mui/material";
+import { Achievements, ImageGallery, VideoGrid } from "@/src/components";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { PiYoutubeLogo } from "react-icons/pi";
+import Link from "next/link";
+
+const links = [
+  {
+    to: "https://www.instagram.com/labrassi_mohamed/profilecard/?igsh=ZDV1dWF3dWtvaXdy",
+    icon: FaInstagram,
+  },
+  { to: "https://www.youtube.com/@labrassimohamed3275", 
+    icon: PiYoutubeLogo },
+  {
+    to: "https://www.facebook.com/profile.php?id=100008916455724&mibextid=ZbWKwL",
+    icon: FaFacebookF,
+  },
+];
 
 const Sport = () => {
   return (
@@ -26,6 +41,14 @@ const Sport = () => {
               From local tournaments to representing my country internationally,
               each match brings new challenges and opportunities for growth.
             </Typography>
+
+            <Box display="flex" justifyContent="flex-end" gap={3} mt={2}>
+              {links.map((item, __index) => (
+                <Link href={item.to} target="_blank" key={__index}>
+                  <item.icon className="w-6 h-6 md:w-8 md:h-8 transition-all duration-300 hover:text-gray-500" />
+                </Link>
+              ))}
+            </Box>
           </div>
           <div className="hidden md:flex h-[700px] w-auto">
             <img src="/sports/img1.jpg" alt="My Pict 1" />

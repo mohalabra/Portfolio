@@ -28,17 +28,17 @@ const formations: FormationType[] = [
     endDate: 2021,
     where: "Faculty of Sciences and Techniques Marrakesh, Morocco",
     description: [
-      "Mathematics, Computer Science, Physics, Chemistry (MIPC) Field",
-      "Relevant courses: Data Structure (C Language), Algebra, Analysis, Quantum mechanics, Chemistry ...",
+      "In Mathematics, Computer Science, Physics, Chemistry (MIPC)",
+      "Relevant courses: Data Structure (C Language), Algebra, Analysis, Quantum Msechanics, Chemistry ...",
     ],
   },
   {
     name: "PROFESSIONAL BACCALAUREATE",
-    startDate: 2019,
-    endDate: 2018,
+    startDate: 2018,
+    endDate: 2019,
     where: "Mohammed VI School Marrakesh, Morocco",
     description: [
-      "Electrotechnics and Communicating Equipment Field",
+      "In Electrotechnics and Communicating Equipment",
     ],
   },
 ];

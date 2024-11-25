@@ -18,7 +18,7 @@ const experiences: ExperienceType[] = [
     endDate: "June 2022",
     where: "International innovation platform (IIP) Marrakesh",
     what: "Final Year Project",
-    tools: "Tools and Technologies (Backend: Spring Boot | Frontend:Angular )",
+    tools: "Tools and Technologies (Backend: Spring Boot | Frontend: Angular )",
   },
 ];
 

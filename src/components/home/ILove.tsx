@@ -6,9 +6,13 @@ import React from "react";
 const ilove = [
   { title: "Building Stuff from Scratch", icon: "discussion" },
   { title: "Deploying and Scaling AI Models", icon: "deep-learning" },
-  { title: "Problem-Solving with Data", icon: "solution" },
   { title: "Optimizing Code and Performance", icon: "speed-radar" },
-  { title: "Developing User-Centric Experiences", icon: "experience" },
+  { title: "Constantly Learning and Exploring New AI Techniques", icon: "solution" },
+  { title: "Innovating with AI to Solve Real-World Challenges", icon: "ai" },
+  {
+    title: "Transforming Complex Problems into Simple Solutions",
+    icon: "experience",
+  },
 ];
 
 const ILove = () => {
@@ -36,7 +40,7 @@ const ILove = () => {
 
         <div className="relative h-full w-full z-10 xs:m-2 sm:m-4 md:m-5 lg:m-8">
           <Typography variant="h3" fontWeight="bold" color="white" mb={6}>
-            What I Love Doing
+            What I Love Doing ?
           </Typography>
 
           <div className="w-full lg:max-w-[65%]">

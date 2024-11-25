@@ -35,7 +35,7 @@ const Section = ({ title, children }: SectionInterface) => {
               color="palette.primary"
               sx={{ fontWeight: 900, letterSpacing: "5px" }}
             >
-              {title}
+              {title.toUpperCase()}
             </Typography>
           )}
         </Box>

@@ -1,7 +1,16 @@
 import { Box, Grid, Typography, Container } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
+
+const links = [
+  { to: "https://mega.nz/file/pnMi2IrQ#zN7sGjwyzKrMTJu20EAYiMewaQpyhPrsCTUxFTyszOw", icon: FaFileDownload },
+  { to: "https://github.com/labrassi-mohamed", icon: FaGithub },
+  {
+    to: "https://www.linkedin.com/in/labrassi-mohamed-%F0%9F%87%B5%F0%9F%87%B8-375566208/",
+    icon: FaLinkedin,
+  },
+];
 
 const FistGrid = () => {
   return (
@@ -47,7 +56,6 @@ const FistGrid = () => {
                 textTransform: "uppercase",
                 letterSpacing: "2px",
                 textDecoration: "underline",
-                textDecorationColor: "palette.primary",
               }}
             >
               MOHAMED LABRASSI
@@ -59,31 +67,18 @@ const FistGrid = () => {
               fontWeight={400}
               sx={{ letterSpacing: "3px", textIndent: "10px" }}
             >
-              An <span style={{ fontWeight: "bold" }}>AI student</span> and
+              An <span style={{ fontWeight: "bold" }}>AI Enginner</span> and
               Software Engineer passionate about leveraging technology to solve
               real-world problems.
             </Typography>
           </Box>
 
           <Box display="flex" justifyContent="flex-end" gap={3} mt={1}>
-            <Link href="https://github.com/labrassi-mohamed" target="_blank">
-              <FaGithub className="w-6 h-6 md:w-8 md:h-8 transition-all duration-300" />
-            </Link>
-            <Link
-              href="https://github.com/labrassi-mohamed"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="w-6 h-6 md:w-8 md:h-8 transition-all duration-300" />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/labrassi-mohamed-%F0%9F%87%B5%F0%9F%87%B8-375566208/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=""
-            >
-              <FaLinkedin className="w-6 h-6 md:w-8 md:h-8 transition-all duration-300 hover:text-[palette.secondary.main]" />
-            </Link>
+            {links.map((item, __index) => (
+              <Link href={item.to} target="_blank" key={__index}>
+                <item.icon className="w-6 h-6 md:w-8 md:h-8 transition-all duration-300 hover:text-gray-500" />
+              </Link>
+            ))}
           </Box>
         </Grid>
       </Grid>

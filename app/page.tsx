@@ -11,11 +11,10 @@ import {
   ProjectsCards,
   Section,
   Skills,
+  StudyCards,
+  ScrollGif
 } from "../src/components";
-import StudyCards from "@/src/components/home/StudyCards";
-import ScrollGif from "@/src/components/ScrollGif";
 import { projects } from "@/src/utils/Constants";
-import Link from "next/link";
 
 function Home() {
   return (
@@ -50,9 +49,8 @@ function Home() {
                 className="pt-3"
               />
             </Grid>
-            {/*  */}
+            {/* Studyied card */}
             <Grid item md={6} xs={12}>
-              {/* Boxs */}
               <StudyCards />
             </Grid>
           </Grid>

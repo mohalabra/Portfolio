@@ -25,7 +25,7 @@ const StudyCard = ({
         }}
         
       >
-        <Typography variant="body2" fontWeight={"bold"} mb={1}>
+        <Typography variant="body2" fontWeight={"bold"} mb={1} >
           {name.toUpperCase()}
         </Typography>
         <Box pl={{ xs: 1, md: 2 }}>

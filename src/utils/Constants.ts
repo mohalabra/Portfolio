@@ -8,13 +8,13 @@ export const MenuItems = [
   { name: "Home", to: "/", icon: HomeIcon },
   { name: "Sport", to: "/sport", icon: SportsGymnasticsIcon },
   { name: "Projects", to: "/projects", icon: AlternateEmailIcon },
-  { name: "About Me", to: "/about-me", icon: InfoIcon },
+  // { name: "About Me", to: "/about-me", icon: InfoIcon },
 ];
 
 export const projects: ProjectType[] = [
   {
-    id: "under-water-image-processing",
-    title: "Under Water Image Processing",
+    id: "under-water-enhancement-image-processing",
+    title: "Underwater Image Enhancement Processing",
     images: [
       "underwater/under_water_1.png",
       "underwater/under_water_2.png",
@@ -41,7 +41,7 @@ export const projects: ProjectType[] = [
         images: ["/projects/underwater/underwater_approach2.png"],
       },
     ],
-    date: "2024",
+    date: "2023",
   },
   {
     id: "iot-smart-home",
@@ -140,7 +140,7 @@ export const projects: ProjectType[] = [
           "This project combines algorithmic problem-solving with modern web development, allowing me to integrate a classic graph algorithm into a responsive and user-friendly application. The goal is to provide a practical demonstration of Dijkstra’s Algorithm while enhancing my skills in building full-stack applications.",
       },
     ],
-    date: "2023",
+    date: "2022",
   },
   {
     id: "iris-classification",
@@ -174,7 +174,51 @@ export const projects: ProjectType[] = [
     ],
     date: "2023",
   },
-];
+  {
+    id: "riad-reservation",
+    title: "Riad Reservation",
+    images: [
+      "saida/home1.png",
+      "saida/home2.png",
+      "saida/home3.png",
+      "saida/home4.png",
+      "saida/home5.png",      
+      "saida/home6.png",      
+      "saida/home7.png",      
+      
+    ],
+    description: [
+      {
+        title: "Description",
+        content:
+          "I developed this project for managing Riad reservations, offering an all-in-one platform to showcase rooms, menus, activities, and presentation spaces. The system allows users to browse and book rooms with real-time availability, explore traditional and modern dishes through a detailed menu, and discover unique activities like cooking classes or guided tours. It also includes a section for reserving presentation or meeting rooms, complete with all necessary amenities. For the admin side, there’s a dashboard to manage reservations, track activities, and analyze performance. The platform combines modern technology with the charm of traditional Riads, creating a seamless and engaging experience for both users and managers.",
+      },
+    ],
+    date: "2022",
+  },
+  {
+    id: "agafay-desert",
+    title: "Agafay desert",
+    images: [
+      "agafay/agafay1.png",
+      "agafay/agafay2.png",
+      "agafay/agafay3.png",
+      "agafay/agafay4.png",
+      "agafay/agafay5.png",      
+      "agafay/agafay6.png",      
+      "agafay/agafay7.png",      
+      "agafay/agafay8.png",      
+    ],
+    description: [
+      {
+        title: "Description",
+        content:
+          "I developed this project which dedicated to managing camel and quad ride experiences in the breathtaking Agafay Desert near Marrakech. The platform provides users with a seamless way to book these adventures, featuring detailed descriptions, stunning visuals of the desert landscape, and customizable tour options. For camel rides, users can enjoy peaceful treks through the dunes, including sunset and sunrise experiences. The quad rides offer thrilling off-road journeys, perfect for adrenaline seekers. The system includes a scheduling calendar, transparent pricing, and secure payment integration. On the admin side, the platform allows for managing bookings, monitoring availability, and receiving customer feedback. This project aims to showcase the beauty of Agafay while offering a modern and hassle-free experience for adventurers.",
+      },
+    ],
+    date: "2023",
+  },
+].sort((a, b) => Number(b.date) - Number(a.date));
 
 export const images = [
   {

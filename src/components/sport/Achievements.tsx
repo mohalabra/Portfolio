@@ -15,7 +15,7 @@ const achievements = [
     location: "Abu Dhabi - United Arab Emirates",
     division: "-69 KG ~ Gi",
     highlights:
-      "Competing internationally was a dream come true. Facing athletes from around the world pushed me beyond my limits and inspired me to take my training to the next level.",
+      "Competing internationally was a milestone. Placing 14th in such a prestigious event motivated me to refine my skills and aim higher.",
   },
   {
     year: "Mars 2018",
@@ -24,7 +24,7 @@ const achievements = [
     result: "Gold Medal",
     division: "-66 KG ~ Gi",
     highlights:
-      "This was my first major national event, and it was a great experience competing against some of the top athletes in the country.",
+      "Winning gold at this event solidified my belief in my training methods and marked a turning point in my competitive journey.",
   },
   {
     year: "Mars 2018",
@@ -33,7 +33,7 @@ const achievements = [
     result: "Gold Medal",
     division: "-66 KG ~ No Gi",
     highlights:
-      "This was my first major national event, and it was a great experience competing against some of the top athletes in the country.",
+      "Securing gold in both Gi and No Gi divisions showed the versatility of my technique and adaptability in different formats.",
   },
   {
     year: "July 2017",
@@ -42,7 +42,7 @@ const achievements = [
     result: "Gold Medal",
     division: "-66 KG ~ Gi",
     highlights:
-      "This was my first major national event, and it was a great experience competing against some of the top athletes in the country.",
+      "This victory reinforced my dedication to the sport and gave me the confidence to compete at a higher level.",
   },
   {
     year: "Mars 2017",
@@ -51,9 +51,10 @@ const achievements = [
     result: "Gold Medal",
     division: "-66 KG",
     highlights:
-      "This was my first major national event, and it was a great experience competing against some of the top athletes in the country.",
+      "Earning my first competition and my first gold medal at a national level was a proud moment that motivated me to pursue even greater challenges.",
   },
 ];
+
 
 const Achievements = () => {
   return (
@@ -77,9 +78,11 @@ const Achievements = () => {
               <Typography variant="body2" color="textSecondary">
                 Division: {item.division}
               </Typography>
-              <Typography variant="body2" color="textSecondary">
-                Result: {item.result}
-              </Typography>
+              {item.result && (
+                <Typography variant="body2" color="textSecondary">
+                  Result: {item.result}
+                </Typography>
+              )}
               <Typography variant="body2">{item.highlights}</Typography>
             </Box>
           </TimelineContent>
