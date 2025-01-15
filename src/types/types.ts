@@ -29,4 +29,5 @@ export type ProjectType = {
   video?: string;
   description: Array<DescriptionType>;
   date: string;
+  tools?: Array<{name: string; icon: any}>
 };

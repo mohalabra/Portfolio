@@ -21,17 +21,38 @@ export default function RootLayout({
     <ReduxProvider>
       <html lang="en">
         <ThemeLayout>
-          <body>
+          <body className="overflow-y-scroll scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-gray-200">
             <AppRouterCacheProvider>
               <CssBaseline />
-              <Header />
               <Box
-                sx={{ bgcolor: "background.default", color: "text.primary" }}
-                className="min-h-[80vh]"
+                sx={{
+                  color: "text.primary",
+                }}
+                className="relative w-full h-full"
               >
-                {children}
+                 {/* Overlay for opacity */}
+                <Box
+                  sx={{ backgroundColor: "background.default" }}
+                  className={`absolute z-10 bg-center inset-0 opacity-70 max-w-screen`}
+                ></Box>
+
+                {/* Background Image */}
+                <Box
+                  sx={{
+                    backgroundImage: `url('/background.jpeg')`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "repeat",
+                  }}
+                  className="absolute z-0 bg-center inset-0 max-w-screen"
+                ></Box>
+
+                {/* Content Layer */}
+                <div className="relative z-30 w-full h-full">
+                  <Header />
+                  <main className="relative my-10">{children}</main>
+                  <Footer />
+                </div>
               </Box>
-              <Footer />
             </AppRouterCacheProvider>
           </body>
         </ThemeLayout>

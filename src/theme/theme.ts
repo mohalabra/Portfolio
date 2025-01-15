@@ -1,5 +1,22 @@
 import { createTheme, ThemeOptions } from "@mui/material/styles";
 
+import { Theme } from '@mui/material/styles';
+
+declare module '@mui/material/styles' {
+  interface TypeBackground {
+    headerBackground: string; // Add custom property
+  }
+
+  interface Theme {
+    // Extend any other custom properties here
+  }
+
+  // Allow configuration in ThemeOptions
+  interface ThemeOptions {
+    background?: Partial<TypeBackground>;
+  }
+}
+
 const sharedTheme: ThemeOptions = {
   breakpoints: {
     values: {
@@ -116,7 +133,7 @@ const lightTheme: ThemeOptions = {
   palette: {
     mode: "light",
     primary: {
-      main: "#1E1E1E"
+      main: "#1E1E1E",
     },
     secondary: {
       main: "#929AAB",
@@ -124,6 +141,7 @@ const lightTheme: ThemeOptions = {
     background: {
       default: "#FFFFFF",
       paper: "#f5f5f5",
+      headerBackground: "rgba(250, 250, 250, 0.8)", // Semi-transparent white
     },
     text: {
       primary: "#1E1E1E",
@@ -144,6 +162,7 @@ const darkTheme: ThemeOptions = {
     background: {
       default: "#1E1E1E",
       paper: "#1a1a1a",
+      headerBackground: "rgba(20, 20, 20, 0.1)", // Semi-transparent dark
     },
     text: {
       primary: "#ffffff",
@@ -151,6 +170,7 @@ const darkTheme: ThemeOptions = {
     },
   },
 };
+
 
 export const getTheme = (mode: "light" | "dark") =>
   createTheme({

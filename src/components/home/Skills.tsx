@@ -10,7 +10,7 @@ const skills = [
   {
     title: "Devops",
     icon: "social.png",
-    a: ["Docker", "Git / Github", "CI/CD", "Scrum"],
+    a: ["CI/CD", "Docker", "Git", "Azure", "AWS", "Jenkins"],
   },
   {
     title: "Client UI/UX",

@@ -4,7 +4,10 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
 
 const links = [
-  { to: "https://mega.nz/file/pnMi2IrQ#zN7sGjwyzKrMTJu20EAYiMewaQpyhPrsCTUxFTyszOw", icon: FaFileDownload },
+  {
+    to: "https://mega.nz/file/pnMi2IrQ#zN7sGjwyzKrMTJu20EAYiMewaQpyhPrsCTUxFTyszOw",
+    icon: FaFileDownload,
+  },
   { to: "https://github.com/labrassi-mohamed", icon: FaGithub },
   {
     to: "https://www.linkedin.com/in/labrassi-mohamed-%F0%9F%87%B5%F0%9F%87%B8-375566208/",
@@ -42,7 +45,7 @@ const FistGrid = () => {
             <Typography
               variant="h4"
               color="palette.text.primary"
-              sx={{ pl: 2, mb: 0.5, letterSpacing: "2px" }}
+              sx={{ pl: 1, mb: 0.5, letterSpacing: "2px" }}
             >
               Hi, my name is
             </Typography>
@@ -67,9 +70,14 @@ const FistGrid = () => {
               fontWeight={400}
               sx={{ letterSpacing: "3px", textIndent: "10px" }}
             >
-              An <span style={{ fontWeight: "bold" }}>AI Enginner</span> and
-              Software Engineer passionate about leveraging technology to solve
-              real-world problems.
+              An{" "}
+              <span style={{ fontWeight: "bold" }}>
+                AI and Software Engineer
+              </span>{" "}
+              with a strong foundation in machine learning, deep learning, and
+              software development. I’m passionate about building innovative
+              solutions that merge cutting-edge technology with real-world
+              applications
             </Typography>
           </Box>
 

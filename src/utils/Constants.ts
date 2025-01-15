@@ -42,6 +42,7 @@ export const projects: ProjectType[] = [
       },
     ],
     date: "2023",
+    tools: [{name: "Nextjs", icon: ""}]
   },
   {
     id: "iot-smart-home",

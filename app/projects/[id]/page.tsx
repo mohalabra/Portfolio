@@ -159,6 +159,14 @@ const ProjectPage = () => {
           </Section>
         </Box>
 
+        {/* Tools */}
+        <Box my={6}>
+          <Section title="Tools used">
+            s
+          </Section>
+        </Box>
+
+        {/* Other Projects */}
         <Box mb={6}>
           <Typography variant="h2" textAlign={"center"} my={5} gutterBottom>
             Other Project

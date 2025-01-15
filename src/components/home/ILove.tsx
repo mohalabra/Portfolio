@@ -48,7 +48,7 @@ const ILove = () => {
               {ilove.map((item, index) => (
                 <Grid item xs={5} md={4} lg={3} key={index}>
                   <div
-                    className="bg-blue-500 w-full p-4 rounded-xl h-full"
+                    className="bg-blue-500 w-full p-4 rounded-xl h-full cursor-pointer hover:animate-scale"
                     style={{ opacity: "85%" }}
                   >
                     <img
