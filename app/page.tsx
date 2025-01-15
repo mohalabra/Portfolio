@@ -21,7 +21,7 @@ function Home() {
     <Box>
       {/* Welcopme message */}
       <Box mb={5} sx={{ textAlign: "center" }}>
-        <Typography variant="h3" color="palette.primary" fontWeight={800}>
+        <Typography variant="h2" color="palette.primary" fontWeight={800}>
           <TypeAnimation
             sequence={["Welcome to my portfolio !", 2000]}
             wrapper="span"

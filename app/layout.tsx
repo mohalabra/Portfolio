@@ -33,7 +33,7 @@ export default function RootLayout({
                  {/* Overlay for opacity */}
                 <Box
                   sx={{ backgroundColor: "background.default" }}
-                  className={`absolute z-10 bg-center inset-0 opacity-70 max-w-screen`}
+                  className={`absolute z-10 bg-center inset-0 opacity-75 max-w-screen`}
                 ></Box>
 
                 {/* Background Image */}

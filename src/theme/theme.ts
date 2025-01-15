@@ -1,8 +1,8 @@
 import { createTheme, ThemeOptions } from "@mui/material/styles";
 
-import { Theme } from '@mui/material/styles';
+import { Theme } from "@mui/material/styles";
 
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface TypeBackground {
     headerBackground: string; // Add custom property
   }
@@ -141,7 +141,7 @@ const lightTheme: ThemeOptions = {
     background: {
       default: "#FFFFFF",
       paper: "#f5f5f5",
-      headerBackground: "rgba(250, 250, 250, 0.8)", // Semi-transparent white
+      headerBackground: "rgba(255, 255, 255, 1)",
     },
     text: {
       primary: "#1E1E1E",
@@ -162,7 +162,7 @@ const darkTheme: ThemeOptions = {
     background: {
       default: "#1E1E1E",
       paper: "#1a1a1a",
-      headerBackground: "rgba(20, 20, 20, 0.1)", // Semi-transparent dark
+      headerBackground: "rgba(82, 82, 82, 0.5)",
     },
     text: {
       primary: "#ffffff",
@@ -170,7 +170,6 @@ const darkTheme: ThemeOptions = {
     },
   },
 };
-
 
 export const getTheme = (mode: "light" | "dark") =>
   createTheme({

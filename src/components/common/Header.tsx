@@ -7,7 +7,6 @@ import { MenuItems } from "@/src/utils/Constants";
 import Link from "next/link";
 import ThemeToggle from "../../theme/ThemeToggle";
 import MobileHeader from "./MobileHeader";
-import { TbBackground } from "react-icons/tb";
 
 const Header = () => {
   const router = useRouter();
@@ -17,40 +16,18 @@ const Header = () => {
       sx={(theme) => ({
         flexGrow: 1,
         display: "flex",
-        border: "1px solid",
+        borderBottom: "3px solid",
         borderColor: theme.palette.primary.main,
       })}
     >
-      <AppBar
-        position="static"
-        sx={{ boxShadow: "none", position: "relative" }}
-      >
-        {/* Semi-transparent background layer */}
-        <Box
-          sx={(theme) => ({
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: theme.palette.background.headerBackground,
-          })}
-        />
+      <AppBar position="static" sx={{ boxShadow: "none" }}>
         <Toolbar
           sx={{
             backgroundColor: "background.headerBackground",
             color: "primary.main",
-            position: "relative",
-            display: "flex",
-            justifyContent: "space-between",
-            zIndex: 1,
           }}
         >
-          <Box
-            sx={(theme) => ({
-              cursor: "pointer",
-            })}
-          >
+          <Box sx={{ flexGrow: 1, cursor: "pointer" }}>
             <img
               src="/logo.png"
               alt="Logo"
@@ -96,14 +73,6 @@ const HeaderItems = () => {
                 <Typography
                   variant="button"
                   color="palette.text.primary"
-                  sx={(theme) => ({
-                    border: "1px solid",
-                    borderColor: theme.palette.primary.main,
-                    px: 2,
-                    py: 1,
-                    // color: theme.palette.primary.main,
-                    // background: theme.palette.background.default
-                  })}
                   className={`${isActive(page.to)} text-lg`}
                 >
                   {page.name}
