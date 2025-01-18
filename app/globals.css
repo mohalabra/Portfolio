@@ -14,3 +14,22 @@
         height: "650px";
     }
 }
+
+/* Keyframe animations */
+@keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-165px);
+    }
+  }
+  
+  @keyframes scroll2 {
+    0% {
+      transform: translateY(165px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

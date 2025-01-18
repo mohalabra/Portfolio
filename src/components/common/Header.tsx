@@ -20,7 +20,7 @@ const Header = () => {
         borderColor: theme.palette.primary.main,
       })}
     >
-      <AppBar position="static" sx={{ boxShadow: "none" }}>
+      <AppBar position="fixed" sx={{ boxShadow: "none" }}>
         <Toolbar
           sx={{
             backgroundColor: "background.headerBackground",

@@ -17,7 +17,7 @@ const links = [
 
 const FistGrid = () => {
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" sx={{ position: "relative" }}>
       <Grid
         container
         spacing={5}
@@ -90,6 +90,27 @@ const FistGrid = () => {
           </Box>
         </Grid>
       </Grid>
+      <div className="absolute w-full h-full top-0 left-0">
+        <div className="absolute top-10 right-10 animate-rotate">
+          <img
+            src="/gifs/robot4.gif"
+            alt="Rotating Robot"
+            className="w-10 h-10"
+          />
+        </div>
+
+        <div className="absolute -bottom-2 left-1/3 animate-slide">
+          <img
+            src="/gifs/robot2.gif"
+            alt="Animated Robot"
+            className="w-10 h-10"
+          />
+        </div>
+
+        <div className="absolute top-10 left-10">
+          <img src="/gifs/robot3.gif" alt="" className="w-14 h-14" />
+        </div>
+      </div>
     </Container>
   );
 };

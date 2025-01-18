@@ -1,5 +1,6 @@
 export { default as Footer } from "./common/Footer";
 export { default as Header } from "./common/Header";
+export { default as LoadingPage } from "./common/LoadingPage";
 export { default as ThemeToggle } from "../theme/ThemeToggle";
 export { default as ThemeLayout } from "../theme/ThemeLayout";
 export { default as MobileHeader } from "./common/MobileHeader";
