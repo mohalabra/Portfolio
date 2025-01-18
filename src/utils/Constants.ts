@@ -5,10 +5,10 @@ import HomeIcon from "@mui/icons-material/Home";
 import { ProjectType } from "../types/types";
 
 export const MenuItems = [
-  { name: "Home", to: "/", icon: HomeIcon },
+  { name: "Home", to: "/home", icon: HomeIcon },
   { name: "Sport", to: "/sport", icon: SportsGymnasticsIcon },
   { name: "Projects", to: "/projects", icon: AlternateEmailIcon },
-  // { name: "About Me", to: "/about-me", icon: InfoIcon },
+  { name: "About Me", to: "/about-me", icon: InfoIcon },
 ];
 
 export const projects: ProjectType[] = [
