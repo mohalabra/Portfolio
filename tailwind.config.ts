@@ -18,7 +18,7 @@ const config: Config = {
       },
       animation: {
         scale: "scale 1s ease-in-out 1",
-        slide: 'slide 10s linear infinite',
+        slide: 'slide 3s linear infinite',
         rotate: 'rotate 5s linear infinite',
       },
       keyframes: {
@@ -27,9 +27,9 @@ const config: Config = {
           "50%": { transform: "scale(1.2)" },
         },
         slide: {
-          '0%': { transform: 'translateX(-150px)' },
-          '50%': { transform: 'translateX(150px)' },
-          '100%': { transform: 'translateX(-150px)' },
+          '0%': { transform: 'translateX(-200%)' },
+          '50%': { transform: 'translateX(200%)' },
+          '100%': { transform: 'translateX(-200%)' },
         },
         rotate: {
           '0%': { transform: 'rotateY(0deg)' },

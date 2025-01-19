@@ -91,11 +91,10 @@ const FistGrid = () => {
         </Grid>
       </Grid>
       <div className="absolute w-full h-full top-0 left-0">
-        <div className="absolute top-10 right-10 animate-rotate">
+        <div className="absolute top-5 right-5 md:top-10 md:right-10 animate-rotate">
           <img
             src="/gifs/robot4.gif"
             alt="Rotating Robot"
-            className="w-10 h-10"
           />
         </div>
 
@@ -103,12 +102,11 @@ const FistGrid = () => {
           <img
             src="/gifs/robot2.gif"
             alt="Animated Robot"
-            className="w-10 h-10"
           />
         </div>
 
-        <div className="absolute top-10 left-10">
-          <img src="/gifs/robot3.gif" alt="" className="w-14 h-14" />
+        <div className="absolute top-5 left-5 md:top-10 md:left-10">
+          <img src="/gifs/robot3.gif" alt=""  />
         </div>
       </div>
     </Container>
