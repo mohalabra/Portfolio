@@ -1,7 +1,5 @@
 import { createTheme, ThemeOptions } from "@mui/material/styles";
 
-import { Theme } from "@mui/material/styles";
-
 declare module "@mui/material/styles" {
   interface TypeBackground {
     headerBackground: string;
@@ -177,7 +175,7 @@ const darkTheme: ThemeOptions = {
   },
 };
 
-export const getTheme = (mode: "light" | "dark") =>
+export const getTheme = (mode: string | null) =>
   createTheme({
     ...sharedTheme,
     ...(mode === "light" ? lightTheme : darkTheme),

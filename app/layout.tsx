@@ -8,7 +8,23 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Mohamed Labrassi",
-  description: "Welcome to my Portfolio",
+  description:
+    "Welcome to Mohamed Labrassi's portfolio. Explore my journey, expertise, and projects in AI, web development, and more.",
+  keywords: [
+    "Mohamed Labrassi",
+    "Portfolio",
+    "Machine Learning",
+    "Deep Learning",
+    "Large Language Models",
+    "Artificial Intelligence",
+    "AI Projects",
+    "Web Development",
+    "Machine Learning",
+    "Full Stack Developer",
+  ],
+  authors: {
+    name: "Mohamed Labrassi",
+  },
 };
 
 export default function RootLayout({

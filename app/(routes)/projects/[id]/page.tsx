@@ -36,6 +36,12 @@ const ProjectPage = () => {
     return notFound();
   }
 
+  const jsonLd = {
+    name: project.title,
+    image: project.images[0],
+    description: project.description,
+  };
+
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string>("");
 
@@ -52,6 +58,10 @@ const ProjectPage = () => {
 
   return (
     <Container maxWidth={"xl"}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Box marginTop={5}>
         <Typography variant="h2" fontWeight={"bold"} gutterBottom>
           {project.title}
@@ -83,7 +93,14 @@ const ProjectPage = () => {
         {/* DataSet */}
         {project.dataset && (
           <Typography>
-            Dataset : <Link href={project.dataset.link} className="text-blue-600 underline" target="_blank">{project.dataset?.name}</Link>
+            Dataset :{" "}
+            <Link
+              href={project.dataset.link}
+              className="text-blue-600 underline"
+              target="_blank"
+            >
+              {project.dataset?.name}
+            </Link>
           </Typography>
         )}
 
