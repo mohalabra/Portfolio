@@ -3,7 +3,7 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: "Mohamed Labrassi - Projects",
-  description: "Welcome to my portfolio",
+  description: "Explore my diverse portfolio of projects showcasing skills in AI, web development, and more.",
 };
 
 const layout = ({
