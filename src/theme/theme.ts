@@ -4,7 +4,9 @@ import { Theme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface TypeBackground {
-    headerBackground: string; // Add custom property
+    headerBackground: string;
+    toolsBackground: string;
+    toolColor: string;
   }
 
   interface Theme {
@@ -142,6 +144,8 @@ const lightTheme: ThemeOptions = {
       default: "#FFFFFF",
       paper: "#f5f5f5",
       headerBackground: "rgba(255, 255, 255, 1)",
+      toolsBackground: "rgba(82, 82, 82, 0.5)",
+      toolColor: "#ffffff",
     },
     text: {
       primary: "#1E1E1E",
@@ -163,6 +167,8 @@ const darkTheme: ThemeOptions = {
       default: "#1E1E1E",
       paper: "#1a1a1a",
       headerBackground: "rgba(82, 82, 82, 0.5)",
+      toolsBackground: "rgba(255, 255, 255, 1)",
+      toolColor: "#1E1E1E",
     },
     text: {
       primary: "#ffffff",

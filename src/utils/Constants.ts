@@ -1,4 +1,3 @@
-import InfoIcon from "@mui/icons-material/Info";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import SportsGymnasticsIcon from "@mui/icons-material/SportsGymnastics";
 import HomeIcon from "@mui/icons-material/Home";
@@ -8,13 +7,14 @@ export const MenuItems = [
   { name: "Home", to: "/home", icon: HomeIcon },
   { name: "Sport", to: "/sport", icon: SportsGymnasticsIcon },
   { name: "Projects", to: "/projects", icon: AlternateEmailIcon },
-  { name: "About Me", to: "/about-me", icon: InfoIcon },
+  // { name: "About Me", to: "/about-me", icon: InfoIcon },
 ];
 
 export const projects: ProjectType[] = [
   {
     id: "under-water-enhancement-image-processing",
     title: "Underwater Image Enhancement Processing",
+    projectType: "Image Enhancing",
     images: [
       "underwater/under_water_1.png",
       "underwater/under_water_2.png",
@@ -42,11 +42,12 @@ export const projects: ProjectType[] = [
       },
     ],
     date: "2023",
-    tools: [{name: "Nextjs", icon: ""}]
+    tools: ["Python", "OpenCv", "Numpy","TypeScript","Nextjs", "Material UI"],
   },
   {
     id: "iot-smart-home",
     title: "IOT Smart Home Project",
+    projectType: "Internet of Things",
     images: [
       "iot/iot_1.jpg",
       "iot/iot_2.jpg",
@@ -115,10 +116,12 @@ export const projects: ProjectType[] = [
       },
     ],
     date: "2023",
+    tools: ["ESP32", "Sensors","Arduino", "Nodejs","React Native"]
   },
   {
     id: "dijkstra-algo",
     title: "Dijkstra's Algorithm",
+    projectType: "Algorithm",
     images: [
       "dijkstra/dijkstra1.png",
       "dijkstra/dijkstra2.png",
@@ -142,10 +145,12 @@ export const projects: ProjectType[] = [
       },
     ],
     date: "2022",
+    tools: ["Python", "Flask", "Nextjs", "React Xarrows"]
   },
   {
     id: "iris-classification",
     title: "IRIS Classification",
+    projectType: "Machine Learning",
     images: [
       "irsi/irsi_1.png",
       "irsi/irsi_2.png",
@@ -174,10 +179,13 @@ export const projects: ProjectType[] = [
       },
     ],
     date: "2023",
+    tools: ["Python", "Flask", "Joblib", "Scikit Learn", "Docker Composer", "Html", "Css"],
+    dataset: {name: "Iris Species", link: "https://www.kaggle.com/datasets/uciml/iris?select=Iris.csv"}
   },
   {
     id: "riad-reservation",
     title: "Riad Reservation",
+    projectType: "Full Stack",
     images: [
       "saida/home1.png",
       "saida/home2.png",
@@ -196,10 +204,12 @@ export const projects: ProjectType[] = [
       },
     ],
     date: "2022",
+    tools: ["Nodejs", "Express", "Nextjs", "MongoDb"]
   },
   {
     id: "agafay-desert",
-    title: "Agafay desert",
+    title: "Agafay Desert",
+    projectType: "Full Stack",
     images: [
       "agafay/agafay1.png",
       "agafay/agafay2.png",
@@ -218,6 +228,8 @@ export const projects: ProjectType[] = [
       },
     ],
     date: "2023",
+    tools: ["Nodejs", "Express", "Nextjs", "MongoDb"]
+
   },
 ].sort((a, b) => Number(b.date) - Number(a.date));
 

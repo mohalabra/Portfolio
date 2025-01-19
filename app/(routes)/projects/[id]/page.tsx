@@ -20,6 +20,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { ProjectsCards, Section } from "@/src/components";
 import notFound from "@/app/not-found";
+import Link from "next/link";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -59,13 +60,40 @@ const ProjectPage = () => {
           Date: {project.date}
         </Typography>
 
+        {/* Tools */}
+        {project.tools && (
+          <div className="flex gap-2 md:gap-4 flex-wrap mb-8">
+            {project.tools.map((item, _idx) => (
+              <div key={_idx}>
+                <Typography
+                  variant="body2"
+                  sx={(theme) => ({
+                    backgroundColor: theme.palette.background.toolsBackground,
+                    color: theme.palette.background.toolColor,
+                  })}
+                  className={`rounded-full px-4 py-2 md:px-5 md:py-2`}
+                >
+                  {item}
+                </Typography>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* DataSet */}
+        {project.dataset && (
+          <Typography>
+            Dataset : <Link href={project.dataset.link} className="text-blue-600 underline" target="_blank">{project.dataset?.name}</Link>
+          </Typography>
+        )}
+
         {/* Description */}
         <div className="flex flex-col items-center">
           <div className="">
             {project.description.map((desc, _index) => (
               <div key={_index}>
                 {desc.title && (
-                  <Typography variant="h3" fontWeight={"bold"}>
+                  <Typography variant="h3" mb={2} fontWeight={"bold"}>
                     {desc.title}
                   </Typography>
                 )}
@@ -159,20 +187,13 @@ const ProjectPage = () => {
           </Section>
         </Box>
 
-        {/* Tools */}
-        <Box my={6}>
-          <Section title="Tools used">
-            s
-          </Section>
-        </Box>
-
         {/* Other Projects */}
         <Box mb={6}>
           <Typography variant="h2" textAlign={"center"} my={5} gutterBottom>
             Other Project
           </Typography>
           <ProjectsCards
-            projects={projects.filter((item) => item.id !== id).slice(0, 3)}
+            projects={projects.filter((item) => item.id !== id).slice(0, 4)}
           />
         </Box>
 

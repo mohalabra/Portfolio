@@ -24,7 +24,7 @@ const config: Config = {
       keyframes: {
         scale: {
           "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.1)" },
+          "50%": { transform: "scale(1.2)" },
         },
         slide: {
           '0%': { transform: 'translateX(-150px)' },

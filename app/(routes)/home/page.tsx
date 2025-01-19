@@ -90,7 +90,7 @@ const page = () => {
       {/* Projects */}
       <Box mb={6}>
         <Section title={"PROJECTS"}>
-          <ProjectsCards projects={projects.slice(0, 3)} />
+          <ProjectsCards projects={projects.slice(0, 4)} />
           <div className="m-5 text-center">
             <a href="/projects" className="underline">
               See More ...

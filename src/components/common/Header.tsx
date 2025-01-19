@@ -49,12 +49,12 @@ const HeaderItems = () => {
     if (path === "/") {
       return pathname === "/"
         ? "text-white font-semibold bg-black px-3 py-2 after:scale-x-100 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
-        : "hover:text-white hover:bg-black hover:scale-105 hover:transition-transform hover:duration-300 hover:px-3 hover:py-2";
+        : "hover:text-white hover:bg-black hover:scale-105 hover:transition-transform hover:duration-300 px-3 py-2";
     }
 
     return pathname.startsWith(path)
       ? "text-white font-semibold bg-black px-3 py-2 after:scale-x-100 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
-      : "hover:text-white hover:bg-black hover:scale-105 hover:transition-transform hover:duration-300 hover:px-3 hover:py-2";
+      : "hover:text-white hover:bg-black hover:scale-105 hover:transition-transform hover:duration-300 px-3 py-2";
   };
 
   return (
@@ -69,11 +69,11 @@ const HeaderItems = () => {
             spacing={7}
           >
             {MenuItems.map((page, index) => (
-              <Link href={page.to} key={index}>
+              <Link href={page.to} key={index} className={`${isActive(page.to)} text-lg flex items-center gap-2 rounded-xl`}>
+                {<page.icon />}
                 <Typography
                   variant="button"
                   color="palette.text.primary"
-                  className={`${isActive(page.to)} text-lg`}
                 >
                   {page.name}
                 </Typography>

@@ -25,9 +25,11 @@ type DescriptionType = {
 export type ProjectType = {
   id: string;
   title: string;
+  projectType?: string;
   images: string[];
   video?: string;
   description: Array<DescriptionType>;
   date: string;
-  tools?: Array<{name: string; icon: any}>
+  tools?: Array<string>
+  dataset?: {name: string; link: string}
 };
