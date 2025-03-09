@@ -1,10 +1,10 @@
-import { Metadata } from "next";
-import React from "react";
+import { Metadata } from 'next';
+import React from 'react';
 
 export const metadata: Metadata = {
-  title: "Mohamed Labrassi - Home",
+  title: 'Mohamed Labrassi - Home',
   description:
-    "Welcome to the portfolio of Mohamed Labrassi. Explore my journey, expertise, and projects.",
+    'Welcome to my portfolio.My name is Mohamed Labrassi. Explore my journey, expertise, and projects.',
 };
 
 const layout = ({

@@ -1,35 +1,44 @@
-import { Box, Grid, Typography, Container } from "@mui/material";
-import Link from "next/link";
-import React from "react";
-import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
+import { Box, Grid, Typography, Container } from '@mui/material';
+import Link from 'next/link';
+import React from 'react';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFileDownload,
+  FaYoutube,
+} from 'react-icons/fa';
 
 const links = [
   {
-    to: "https://mega.nz/file/pnMi2IrQ#zN7sGjwyzKrMTJu20EAYiMewaQpyhPrsCTUxFTyszOw",
+    to: 'https://mega.nz/file/ZzsQkSxC#kNyAOUv-s2H6x2s8SE29R7FW1JCLYVLg83JGjUiyXHg',
     icon: FaFileDownload,
   },
-  { to: "https://github.com/labrassi-mohamed", icon: FaGithub },
+  { to: 'https://github.com/labrassi-mohamed', icon: FaGithub },
   {
-    to: "https://www.linkedin.com/in/labrassi-mohamed-%F0%9F%87%B5%F0%9F%87%B8-375566208/",
+    to: 'https://www.linkedin.com/in/labrassi-mohamed-%F0%9F%87%B5%F0%9F%87%B8-375566208/',
     icon: FaLinkedin,
+  },
+  {
+    to: 'https://www.youtube.com/@supersimpleai02',
+    icon: FaYoutube,
   },
 ];
 
 const FistGrid = () => {
   return (
-    <Container maxWidth="xl" sx={{ position: "relative" }}>
+    <Container maxWidth="xl" sx={{ position: 'relative' }}>
       <Grid
         container
         spacing={5}
-        alignItems={"center"}
-        justifyContent={"center"}
+        alignItems={'center'}
+        justifyContent={'center'}
       >
         <Grid item xs={12} md={5} lg={4}>
           <Box
             sx={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
             }}
           >
             <img
@@ -40,12 +49,12 @@ const FistGrid = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={10} md={6} lg={7} direction={"row"}>
+        <Grid item xs={10} md={6} lg={7} direction={'row'}>
           <Box>
             <Typography
               variant="h4"
               color="palette.text.primary"
-              sx={{ pl: 1, mb: 0.5, letterSpacing: "2px" }}
+              sx={{ pl: 1, mb: 0.5, letterSpacing: '2px' }}
             >
               Hi, my name is
             </Typography>
@@ -56,9 +65,9 @@ const FistGrid = () => {
               sx={{
                 pl: 1,
                 mb: 1,
-                textTransform: "uppercase",
-                letterSpacing: "2px",
-                textDecoration: "underline",
+                textTransform: 'uppercase',
+                letterSpacing: '2px',
+                textDecoration: 'underline',
               }}
             >
               MOHAMED LABRASSI
@@ -68,16 +77,13 @@ const FistGrid = () => {
               variant="h5"
               color="palette.primary"
               fontWeight={400}
-              sx={{ letterSpacing: "3px", textIndent: "10px" }}
+              sx={{ letterSpacing: '3px', textIndent: '10px' }}
             >
-              An{" "}
-              <span style={{ fontWeight: "bold" }}>
-                AI and Software Engineer
-              </span>{" "}
-              with a strong foundation in machine learning, deep learning, and
-              software development. I’m passionate about building innovative
-              solutions that merge cutting-edge technology with real-world
-              applications
+              An{' '}
+              <span style={{ fontWeight: 'bold' }}>AI & Software Engineer</span>{' '}
+              specializing in machine learning, deep learning, and full-stack
+              development. I engineer intelligent systems that transform
+              cutting-edge research into scalable, real-world solutions.
             </Typography>
           </Box>
 
@@ -90,23 +96,17 @@ const FistGrid = () => {
           </Box>
         </Grid>
       </Grid>
-      <div className="absolute w-full h-full top-0 left-0">
+      <div className="absolute w-full h-full top-0 left-0 -z-20">
         <div className="absolute top-5 right-5 md:top-10 md:right-10 animate-rotate">
-          <img
-            src="/gifs/robot4.gif"
-            alt="Rotating Robot"
-          />
+          <img src="/gifs/robot4.gif" alt="Rotating Robot" />
         </div>
 
         <div className="absolute -bottom-2 left-1/3 animate-slide">
-          <img
-            src="/gifs/robot2.gif"
-            alt="Animated Robot"
-          />
+          <img src="/gifs/robot2.gif" alt="Animated Robot" />
         </div>
 
         <div className="absolute top-5 left-5 md:top-10 md:left-10">
-          <img src="/gifs/robot3.gif" alt=""  />
+          <img src="/gifs/robot3.gif" alt="" />
         </div>
       </div>
     </Container>

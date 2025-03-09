@@ -1,5 +1,5 @@
 export interface FormationType {
-  name: string;
+  title: string;
   startDate: number;
   endDate?: number;
   where: string;

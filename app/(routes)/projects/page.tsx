@@ -1,5 +1,5 @@
 import { ProjectsCards } from "@/src/components";
-import { projects } from "@/src/utils/Constants";
+import { projects } from "@/src/data/projects.data";
 import { Container, Typography } from "@mui/material";
 import React from "react";
 

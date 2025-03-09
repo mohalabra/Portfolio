@@ -1,35 +1,30 @@
-"use client";
-
-import { FormationType } from "@/src/types/types";
-import { useTheme } from "@mui/material";
-import { Box, Typography } from "@mui/material";
-import React from "react";
+import { FormationType } from '@/src/types/types';
+import { Box, Typography } from '@mui/material';
+import React from 'react';
 
 const StudyCard = ({
-  name,
+  title,
   startDate,
   endDate,
   description,
   where,
 }: FormationType) => {
-  const theme = useTheme();
   return (
     <div className="shadow-lg cursor-pointer hover:animate-scale">
       <Box
-        sx={{
+        sx={(theme) => ({
           p: 3,
           backgroundColor: theme.palette.background.default,
           boxShadow: theme.shadows[1],
           borderRadius: 2,
-          maxWidth: "100%",
-        }}
-        
+          maxWidth: '100%',
+        })}
       >
-        <Typography variant="body2" fontWeight={"bold"} mb={1} >
-          {name.toUpperCase()}
+        <Typography variant="body1" fontWeight={'bold'} mb={1}>
+          {title.toUpperCase()}
         </Typography>
         <Box pl={{ xs: 1, md: 2 }}>
-          <Typography variant="body2" fontStyle={"italic"} mb={1}>
+          <Typography variant="body2" fontStyle={'italic'} mb={1}>
             {endDate ? (
               <span>
                 From

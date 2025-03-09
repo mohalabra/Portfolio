@@ -1,19 +1,18 @@
-import React from "react";
-import { Box, Container, Typography } from "@mui/material";
-import { Achievements, ImageGallery, VideoGrid } from "@/src/components";
-import { FaInstagram, FaFacebookF } from "react-icons/fa";
-import { PiYoutubeLogo } from "react-icons/pi";
-import Link from "next/link";
+import React from 'react';
+import { Box, Container, Typography } from '@mui/material';
+import { Achievements, ImageGallery, VideoGrid } from '@/src/components';
+import { FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { PiYoutubeLogo } from 'react-icons/pi';
+import Link from 'next/link';
 
 const links = [
   {
-    to: "https://www.instagram.com/labrassi_mohamed/profilecard/?igsh=ZDV1dWF3dWtvaXdy",
+    to: 'https://www.instagram.com/labrassi_mohamed/profilecard/?igsh=ZDV1dWF3dWtvaXdy',
     icon: FaInstagram,
   },
-  { to: "https://www.youtube.com/@labrassimohamed3275", 
-    icon: PiYoutubeLogo },
+  { to: 'https://www.youtube.com/@labrassimohamed3275', icon: PiYoutubeLogo },
   {
-    to: "https://www.facebook.com/profile.php?id=100008916455724&mibextid=ZbWKwL",
+    to: 'https://www.facebook.com/profile.php?id=100008916455724&mibextid=ZbWKwL',
     icon: FaFacebookF,
   },
 ];
@@ -32,7 +31,7 @@ const Sport = () => {
             />
           </div>
           <div className="flex-col md:max-w-[500px] lg:max-w-[800px] content-center justify-center">
-            <Typography variant="h1">"My Jiu-Jitsu Journey"</Typography>
+            <Typography variant="h1">{`"`}My Jiu-Jitsu Journey{`"`}</Typography>
             <Typography variant="body1">
               I’m passionate about Brazilian Jiu-Jitsu. I started training in
               2014, and since then, Jiu-Jitsu has been more than just a sport to
@@ -60,8 +59,8 @@ const Sport = () => {
         <Typography
           variant="h1"
           textAlign="center"
-          textTransform={"capitalize"}
-          fontWeight={"bold"}
+          textTransform={'capitalize'}
+          fontWeight={'bold'}
           mb={4}
         >
           Achievements
@@ -75,8 +74,8 @@ const Sport = () => {
         <Typography
           variant="h1"
           textAlign="center"
-          textTransform={"capitalize"}
-          fontWeight={"bold"}
+          textTransform={'capitalize'}
+          fontWeight={'bold'}
           mb={4}
         >
           Videos
@@ -88,8 +87,8 @@ const Sport = () => {
         <Typography
           variant="h1"
           textAlign="center"
-          textTransform={"capitalize"}
-          fontWeight={"bold"}
+          textTransform={'capitalize'}
+          fontWeight={'bold'}
           mb={4}
         >
           Gallery

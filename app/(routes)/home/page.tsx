@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import {
   ExperiencesCards,
@@ -9,23 +9,25 @@ import {
   Section,
   StudyCards,
   Skills,
-} from "@/src/components";
-import { projects } from "@/src/utils/Constants";
-import { Box, Grid, Typography } from "@mui/material";
-import React from "react";
-import { TypeAnimation } from "react-type-animation";
+} from '@/src/components';
+import { projects } from '@/src/data/projects.data';
+import { Box, Grid, Typography } from '@mui/material';
+import React from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 const page = () => {
   return (
     <Box>
       {/* Welcopme message */}
-      <Box mb={5} sx={{ textAlign: "center" }}>
+      <Box mb={5} sx={{ textAlign: 'center' }}>
         <Typography variant="h2" color="palette.primary" fontWeight={800}>
           <TypeAnimation
-            sequence={["Welcome to my portfolio !", 2000]}
+            sequence={['Welcome to my portfolio !', 2000]}
             wrapper="span"
             speed={40}
-            style={{ display: "inline-block" }}
+            style={{
+              display: 'inline-block',
+            }}
             repeat={Infinity}
           />
         </Typography>
@@ -38,10 +40,10 @@ const page = () => {
 
       {/* Formations */}
       <Box mb={6}>
-        <Section title={"FORMATION"}>
+        <Section title={'FORMATION'}>
           <Grid container gap={2} justifyContent="space-evenly">
             {/* Gif */}
-            <Grid item md={5} xs={12} className="place-items-center">
+            <Grid item lg={5} xs={12} className="place-items-center">
               <img
                 src="/gifs/studying-study.gif"
                 alt="Study Gif"
@@ -49,7 +51,7 @@ const page = () => {
               />
             </Grid>
             {/* Studyied card */}
-            <Grid item md={6} xs={12}>
+            <Grid item lg={6} xs={12}>
               <StudyCards />
             </Grid>
           </Grid>
@@ -63,7 +65,7 @@ const page = () => {
 
       {/* WORK EXPERIENCE */}
       <Box mb={6}>
-        <Section title={"WORK EXPERIENCE"}>
+        <Section title={'WORK EXPERIENCE'}>
           <Grid container gap={2} justifyContent="space-evenly">
             {/* Experiences */}
             <Grid item md={6} xs={12}>
@@ -74,8 +76,8 @@ const page = () => {
               <img
                 src="/Laptop.svg"
                 alt="Laptop svg"
-                width={"600px"}
-                height={"600px"}
+                width={'600px'}
+                height={'600px'}
               />
             </Grid>
           </Grid>
@@ -89,9 +91,9 @@ const page = () => {
 
       {/* Projects */}
       <Box mb={6}>
-        <Section title={"PROJECTS"}>
+        <Section title={'PROJECTS'}>
           <ProjectsCards projects={projects.slice(0, 4)} />
-          <div className="m-5 text-center">
+          <div className="m-5 text-center ">
             <a href="/projects" className="underline">
               See More ...
             </a>

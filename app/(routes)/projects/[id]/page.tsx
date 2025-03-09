@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Close as CloseIcon } from "@mui/icons-material";
-import { projects } from "@/src/utils/Constants";
 import ReactPlayer from "react-player";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -21,6 +20,7 @@ import "swiper/css/navigation";
 import { ProjectsCards, Section } from "@/src/components";
 import notFound from "@/app/not-found";
 import Link from "next/link";
+import { projects } from "@/src/data/projects.data";
 
 const ProjectPage = () => {
   const { id } = useParams();
