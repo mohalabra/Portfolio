@@ -138,7 +138,7 @@ const ProjectPage = () => {
 
                 {desc.images &&
                   desc.images.map((image, _index) => (
-                    <div className="flex justify-center" key={_index}>
+                    <div className="flex justify-center mb-5" key={_index}>
                       <img src={image} alt={desc.title || desc.subtitle} />
                     </div>
                   ))}

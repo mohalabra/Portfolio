@@ -32,7 +32,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           <CardContent>
             <Typography variant="body1" mb={1}>
               <Link href={`/projects/${project.id}`} underline="hover">
-                {project.title}
+                {project.title.length > 30 ? `${project.title.substring(0, 30)}...` : project.title}
               </Link>
             </Typography>
             <div className="flex gap-4 items-center">
