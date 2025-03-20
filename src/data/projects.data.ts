@@ -1,4 +1,6 @@
+import { subscribe } from "diagnostics_channel";
 import { ProjectType } from "../types/types";
+import { ImagesearchRoller, Subtitles } from "@mui/icons-material";
 
 export const projects: ProjectType[] = [
   {
@@ -282,5 +284,110 @@ export const projects: ProjectType[] = [
     ],
     date: "2024",
     tools: ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib", "Nextjs"],
+  },
+  {
+    id: "ctr-recommendation-reinforcement-learning",
+    title: "CTR Recommendation Using Reinforcement Learning",
+    projectType: "Recommendation System",
+    images: [
+      "ctr_recommendation/ctr_1.png",
+      "ctr_recommendation/ctr_2.png",
+      "ctr_recommendation/ctr_3.png",
+      "ctr_recommendation/ctr_4.png",
+    ],
+    video: "https://youtu.be/t6I2_rEW4m4",
+    dataset: {
+      name: "Ads_CTR_Optimisation",
+      link: "https://www.kaggle.com/datasets/akram24/ads-ctr-optimisation",
+    },
+    description: [
+      {
+        title: "Description",
+        content:
+          "This project introduces a novel personalized ad recommendation system using the Advantage Actor-Critic (A2C) reinforcement learning algorithm. The system dynamically adapts to evolving user preferences and optimizes ad placement strategies to maximize long-term rewards. The proposed model integrates reinforcement learning with advanced contextual understanding of user behavior, significantly improving ad relevance, click-through rates (CTR), and user retention compared to traditional methods.",
+      },
+      {
+        subtitle: "Dataset and Data Preparation",
+        content:
+          "The dataset consists of 10,000 rows and 10 columns, representing user interactions with different ads (Ad-1 to Ad-10) and their corresponding CTR values. To gain a quick overview, we inspect the first few rows using `data.head()`.",
+        images: ["/projects/ctr_recommendation/dataset_preparation.png"],
+      },
+      {
+        subtitle: "A2C Network Architecture",
+        content:
+          "The A2C neural network consists of shared layers, an actor path for generating recommendations, and a critic path for evaluating recommendations. The model balances exploration and exploitation, with the actor generating recommendations and the critic evaluating their effectiveness.",
+        images: ["/projects/ctr_recommendation/a2c_architecture.png"],
+      },
+      {
+        subtitle: "State Representation and Recommendation Mechanism",
+        content:
+          "The user state is represented as a vector embedding user preferences derived from interaction data. The A2C model outputs a probability distribution over possible actions (recommendations), with the top-k actions presented to the user. The system incorporates user feedback to continuously refine its recommendations.",
+      },
+      {
+        subtitle: "Evaluation and Results",
+        content:
+          "The model was evaluated using a CTR dataset, achieving high accuracy and AUC scores. The A2C-based system demonstrated stable learning behavior over 1000 episodes, with both actor and critic losses showing convergence. The system successfully adapted to user preferences, improving recommendation accuracy over time.",
+        images: [
+          "/projects/ctr_recommendation/training_curves.png",
+          "/projects/ctr_recommendation/confusion_matrix.png",
+        ],
+      },
+    ],
+    date: "2024",
+    tools: [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "Flask",
+      "NumPy",
+      "Pandas",
+      "Nextjs",
+    ],
+  },
+  {
+    id: "gps-jamming-detection-uav",
+    title:
+      "Machine Learning-based Detection of GPS Jamming Attacks in Unmanned Aerial Vehicles (UAVs)",
+    projectType: "Security and Anomaly Detection",
+    images: [
+      "gps_jamming/gps_1.png",
+      "gps_jamming/hyperparameter_tuning.png",
+      "gps_jamming/confusion_matrix.png",
+      "gps_jamming/roc_curve.png",
+    ],
+    video: "",
+    dataset: {
+      name: "UAV Attack Dataset",
+      link: "https://ieee-dataport.org/open-access/uav-attack-dataset",
+    },
+    description: [
+      {
+        title: "Description",
+        content:
+          "This paper proposes a hybrid machine learning framework for detecting GPS jamming attacks in UAVs using flight data, including GPS positioning, accelerometer readings, and environmental features. The study evaluates multiple classification models, such as Gradient Boosting, SVM, Logistic Regression, and KNN, achieving near-perfect detection rates. The results demonstrate the potential of machine learning to enhance UAV security and resilience against GPS jamming attacks.",
+      },
+      {
+        subtitle: "Dataset and Preprocessing",
+        content:
+          "The dataset includes GPS positioning metrics, accelerometer readings, and environmental conditions. Data preprocessing involved handling missing values, normalization, feature extraction, and signal processing to prepare the data for machine learning.",
+      },
+      {
+        subtitle: "Model Selection and Hyperparameter Tuning",
+        content:
+          "Five classification models were evaluated, including Gradient Boosting, SVM with polynomial features, Logistic Regression with ElasticNet regularization, and KNN with advanced distance metrics. Hyperparameter tuning was performed using GridSearchCV to optimize model performance.",
+        images: ["/projects/gps_jamming/hyperparameter_tuning.png"],
+      },
+      {
+        subtitle: "Results and Evaluation",
+        content:
+          "All models achieved near-perfect accuracy, with ROC curves and AUC scores of 1.0. The confusion matrices showed zero false positives and false negatives, indicating perfect classification performance. The learning curves demonstrated the models ability to generalize well across different training set sizes.",
+        images: [
+          "/projects/gps_jamming/confusion_matrix.png",
+          "/projects/gps_jamming/roc_curve.png",
+        ],
+      },
+    ],
+    date: "2024",
+    tools: ["Python", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
   },
 ].sort((a, b) => Number(b.date) - Number(a.date));
