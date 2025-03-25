@@ -1,6 +1,5 @@
-import { subscribe } from "diagnostics_channel";
-import { ProjectType } from "../types/types";
-import { ImagesearchRoller, Subtitles } from "@mui/icons-material";
+import { Category } from "@mui/icons-material";
+import { ProjectCategory as pc, ProjectStatus as ps, ProjectType } from "../types/types";
 
 export const projects: ProjectType[] = [
   {
@@ -35,6 +34,8 @@ export const projects: ProjectType[] = [
     ],
     date: "2023",
     tools: ["Python", "OpenCv", "Numpy", "TypeScript", "Nextjs", "Material UI"],
+    status: ps.Completed,
+    Category: [pc.AI]
   },
   {
     id: "iot-smart-home",
@@ -109,6 +110,8 @@ export const projects: ProjectType[] = [
     ],
     date: "2023",
     tools: ["ESP32", "Sensors", "Arduino", "Nodejs", "React Native"],
+    status: ps.Completed,
+    Category: [pc.IOT]
   },
   {
     id: "dijkstra-algo",
@@ -138,6 +141,8 @@ export const projects: ProjectType[] = [
     ],
     date: "2022",
     tools: ["Python", "Flask", "Nextjs", "React Xarrows"],
+    status: ps.Completed,
+    Category: [pc.AI]
   },
   {
     id: "iris-classification",
@@ -184,6 +189,8 @@ export const projects: ProjectType[] = [
       name: "Iris Species",
       link: "https://www.kaggle.com/datasets/uciml/iris?select=Iris.csv",
     },
+    status: ps.Completed,
+    Category: [pc.MACHINELARNING]
   },
   {
     id: "riad-reservation",
@@ -207,6 +214,8 @@ export const projects: ProjectType[] = [
     ],
     date: "2022",
     tools: ["Nodejs", "Express", "Nextjs", "MongoDb"],
+    status: ps.Completed,
+    categories: [pc.FULLSTACK],
   },
   {
     id: "agafay-desert",
@@ -231,6 +240,8 @@ export const projects: ProjectType[] = [
     ],
     date: "2023",
     tools: ["Nodejs", "Express", "Nextjs", "MongoDb"],
+    status: ps.Completed,
+    categories: [pc.FULLSTACK],
   },
   {
     id: "real-vs-fake-image-classification",
@@ -284,6 +295,8 @@ export const projects: ProjectType[] = [
     ],
     date: "2024",
     tools: ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib", "Nextjs"],
+    status: ps.Completed,
+    categories: [pc.AI],
   },
   {
     id: "ctr-recommendation-reinforcement-learning",
@@ -343,6 +356,8 @@ export const projects: ProjectType[] = [
       "Pandas",
       "Nextjs",
     ],
+    status: ps.Planned,
+    categories: [pc.AI],
   },
   {
     id: "gps-jamming-detection-uav",
@@ -389,5 +404,7 @@ export const projects: ProjectType[] = [
     ],
     date: "2024",
     tools: ["Python", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
+    status: ps.InProgress,
+    categories: [pc.MACHINELARNING, pc.AI],
   },
 ].sort((a, b) => Number(b.date) - Number(a.date));

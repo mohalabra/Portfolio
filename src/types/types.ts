@@ -22,14 +22,36 @@ type DescriptionType = {
   images?: string[];
 };
 
+export enum ProjectStatus {
+  Completed = "Completed",
+  InProgress = "In Progress",
+  Planned = "Planned",
+}
+
+export enum ProjectCategory {
+  ALL = "All",
+  AI = "AI",
+  MACHINELARNING = "Machine Learning",
+  DEEPLEARNING = "Deep Learning",
+  NEURALNETWORKS = "Neural Networks",
+  COMPUTERVISION = "Computer Vision",
+  NATURALLANGUAGEPROCESSING = "Natural Language Processing",
+  REINFORCEMENTLEARNING = "Reinforcement Learning",
+  FULLSTACK = "Full Stack",
+  IOT = "IOT",
+  IMAGEPROCESSING = "Image Processing",
+}
+
 export type ProjectType = {
   id: string;
   title: string;
-  projectType?: string;
   images: string[];
-  video?: string;
   description: Array<DescriptionType>;
   date: string;
-  tools?: Array<string>
-  dataset?: {name: string; link: string}
+  status: ProjectStatus;
+  projectType?: string;
+  video?: string;
+  tools?: Array<string>;
+  dataset?: { name: string; link: string };
+  categories?: Array<ProjectCategory>;
 };

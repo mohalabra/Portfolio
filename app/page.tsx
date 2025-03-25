@@ -9,6 +9,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
+
       window.location.href = "/home";
     }, 5000);
 
