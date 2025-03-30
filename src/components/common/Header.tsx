@@ -1,7 +1,7 @@
 "use client";
 
 import { AppBar, Box, Stack, Toolbar, Typography } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { MenuItems } from "@/src/utils/Constants";
 import Link from "next/link";
@@ -45,6 +45,17 @@ const Header = () => {
 const HeaderItems = () => {
   const pathname = usePathname();
 
+  const trackUser = async (pageTo: string) => {
+    console.log(pageTo);
+    await fetch("/api/track-visitor", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ page: pageTo }),
+    });
+  };
+
   const isActive = (path: string) => {
     if (path === "/") {
       return pathname === "/"
@@ -69,12 +80,14 @@ const HeaderItems = () => {
             spacing={7}
           >
             {MenuItems.map((page, index) => (
-              <Link href={page.to} key={index} className={`${isActive(page.to)} text-lg flex items-center gap-2 rounded-xl`}>
+              <Link
+                href={page.to}
+                key={index}
+                onClick={() => trackUser(page.to)}
+                className={`${isActive(page.to)} text-lg flex items-center gap-2 rounded-xl`}
+              >
                 {<page.icon />}
-                <Typography
-                  variant="button"
-                  color="palette.text.primary"
-                >
+                <Typography variant="button" color="palette.text.primary">
                   {page.name}
                 </Typography>
               </Link>

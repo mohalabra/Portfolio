@@ -1,14 +1,17 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Footer, Header } from "@/src/components";
 import { Box } from "@mui/material";
+import FeedbackButton from "@/src/components/common/FeedbackButton";
+import FeedbackForm from "@/src/components/common/FeedbackForm";
 
 const layout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
+  const [openFeedback, setOpenFeedback] = useState<boolean>(false);
   const hasTracked = useRef(false);
   useEffect(() => {
     if (!hasTracked.current) {
@@ -63,7 +66,16 @@ const layout = ({
         {/* Content Layer */}
         <div className="relative z-30 w-full h-full">
           <Header />
-          <div className="relative mt-32 mb-10">{children}</div>
+          <FeedbackForm isOpen={openFeedback} setIsOpen={setOpenFeedback} />
+          <div className="relative mt-32 mb-10 min-h-[90vh]">
+            <>
+              <div className="bottom-10 left-10 fixed z-50">
+                <FeedbackButton setOpenFeedback={setOpenFeedback} />
+              </div>
+              {children}
+            </>
+          </div>
+
           <Footer />
         </div>
       </Box>

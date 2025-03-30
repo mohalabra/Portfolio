@@ -16,4 +16,3 @@ export { default as Achievements } from "./sport/Achievements";
 export { default as ImageGallery } from "./sport/ImageGallery";
 export { default as ScrollGif } from "./ScrollGif";
 export { default as VideoGrid } from "./sport/VideoGrid";
-

@@ -3,7 +3,7 @@
 import { ProjectCategory, ProjectType } from "@/src/types/types";
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import ProjectCard from "../home/ProjectCard";
+import ProjectCard from "./ProjectCard";
 
 const ProjectsCards = ({ projects }: { projects: Array<ProjectType> }) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);

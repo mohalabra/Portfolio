@@ -39,7 +39,10 @@ export default function RootLayout({
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         </head>
         <ThemeLayout>
-          <body className="overflow-y-scroll scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-gray-200" cz-shortcut-listen="true">
+          <body
+            className="overflow-y-scroll scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-gray-200"
+            cz-shortcut-listen="true"
+          >
             <AppRouterCacheProvider>
               <CssBaseline />
               {children}

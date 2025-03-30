@@ -1,5 +1,8 @@
-import { Category } from "@mui/icons-material";
-import { ProjectCategory as pc, ProjectStatus as ps, ProjectType } from "../types/types";
+import {
+  ProjectCategory as pc,
+  ProjectStatus as ps,
+  ProjectType,
+} from "../types/types";
 
 export const projects: ProjectType[] = [
   {
@@ -35,7 +38,7 @@ export const projects: ProjectType[] = [
     date: "2023",
     tools: ["Python", "OpenCv", "Numpy", "TypeScript", "Nextjs", "Material UI"],
     status: ps.Completed,
-    Category: [pc.AI]
+    categories: [pc.AI],
   },
   {
     id: "iot-smart-home",
@@ -111,7 +114,7 @@ export const projects: ProjectType[] = [
     date: "2023",
     tools: ["ESP32", "Sensors", "Arduino", "Nodejs", "React Native"],
     status: ps.Completed,
-    Category: [pc.IOT]
+    categories: [pc.IOT],
   },
   {
     id: "dijkstra-algo",
@@ -142,7 +145,7 @@ export const projects: ProjectType[] = [
     date: "2022",
     tools: ["Python", "Flask", "Nextjs", "React Xarrows"],
     status: ps.Completed,
-    Category: [pc.AI]
+    categories: [pc.AI],
   },
   {
     id: "iris-classification",
@@ -190,7 +193,7 @@ export const projects: ProjectType[] = [
       link: "https://www.kaggle.com/datasets/uciml/iris?select=Iris.csv",
     },
     status: ps.Completed,
-    Category: [pc.MACHINELARNING]
+    categories: [pc.MACHINELARNING, pc.AI],
   },
   {
     id: "riad-reservation",
@@ -356,7 +359,7 @@ export const projects: ProjectType[] = [
       "Pandas",
       "Nextjs",
     ],
-    status: ps.Planned,
+    status: ps.Completed,
     categories: [pc.AI],
   },
   {
@@ -379,7 +382,7 @@ export const projects: ProjectType[] = [
       {
         title: "Description",
         content:
-          "This paper proposes a hybrid machine learning framework for detecting GPS jamming attacks in UAVs using flight data, including GPS positioning, accelerometer readings, and environmental features. The study evaluates multiple classification models, such as Gradient Boosting, SVM, Logistic Regression, and KNN, achieving near-perfect detection rates. The results demonstrate the potential of machine learning to enhance UAV security and resilience against GPS jamming attacks.",
+          "This project I propose a hybrid machine learning framework for detecting GPS jamming attacks in UAVs using flight data, including GPS positioning, accelerometer readings, and environmental features. The study evaluates multiple classification models, such as Gradient Boosting, SVM, Logistic Regression, and KNN, achieving near-perfect detection rates. The results demonstrate the potential of machine learning to enhance UAV security and resilience against GPS jamming attacks.",
       },
       {
         subtitle: "Dataset and Preprocessing",
@@ -404,7 +407,7 @@ export const projects: ProjectType[] = [
     ],
     date: "2024",
     tools: ["Python", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
-    status: ps.InProgress,
+    status: ps.Completed,
     categories: [pc.MACHINELARNING, pc.AI],
   },
 ].sort((a, b) => Number(b.date) - Number(a.date));

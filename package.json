@@ -1,5 +1,10 @@
 {
-  "name": "my-app",
+  "name": "mohamed-labrassi",
+  "author": {
+    "name": "Mohamed Labrassi",
+    "email": "labrassi.mohamed@gmail.com",
+    "url": "https://mohamedlabrassi.vercel.app"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {

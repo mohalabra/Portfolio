@@ -83,15 +83,15 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                   backgroundColor:
                     theme.palette.mode === "dark"
                       ? project.status === ps.Completed
-                        ? "#00E676" 
+                        ? "#00E676"
                         : project.status === ps.InProgress
-                          ? "#448AFF" 
-                          : "#90A4AE" 
+                          ? "#448AFF"
+                          : "#90A4AE"
                       : project.status === ps.Completed
-                        ? "#2E7D32" 
+                        ? "#2E7D32"
                         : project.status === ps.InProgress
-                          ? "#1565C0" 
-                          : "#546E7A", 
+                          ? "#1565C0"
+                          : "#546E7A",
                   color: theme.palette.mode == "dark" ? "black" : "white",
                 }}
               >
