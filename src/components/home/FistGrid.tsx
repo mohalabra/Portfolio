@@ -10,7 +10,7 @@ import {
 
 const links = [
   {
-    to: 'https://mega.nz/file/ZzsQkSxC#kNyAOUv-s2H6x2s8SE29R7FW1JCLYVLg83JGjUiyXHg',
+    to: 'https://mega.nz/file/Jrlm1BgC#2MXqRhF0ENeBuLlgxlpQEw1mQKViDM67M8mum37_KXw',
     icon: FaFileDownload,
   },
   { to: 'https://github.com/labrassi-mohamed', icon: FaGithub },
