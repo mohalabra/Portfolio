@@ -46,7 +46,7 @@ const HeroSection = () => {
       <Grid item xs={10} md={7} lg={7} direction={"row"}>
         <Box>
           <Typography
-            variant="h4"
+            variant="h5"
             color="palette.text.primary"
             sx={{ pl: 1, mb: 0.5, letterSpacing: "2px" }}
           >
@@ -54,7 +54,7 @@ const HeroSection = () => {
           </Typography>
 
           <Typography
-            variant="h3"
+            variant="h4"
             fontWeight={500}
             sx={{
               pl: 1,
@@ -68,7 +68,7 @@ const HeroSection = () => {
           </Typography>
 
           <Typography
-            variant="h5"
+            variant="h6"
             color="palette.primary"
             fontWeight={400}
             sx={{ letterSpacing: "3px", textIndent: "10px" }}

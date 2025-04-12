@@ -12,7 +12,6 @@ import {
   Phone as PhoneIcon,
   LocationOn as AddressIcon,
 } from "@mui/icons-material";
-import Link from "next/link";
 
 const ContactSection = () => {
   return (
