@@ -13,6 +13,7 @@ export interface ExperienceType {
   where: string;
   what: string;
   tools: string;
+  description: string;
 }
 
 type DescriptionType = {
