@@ -9,6 +9,7 @@ const ExperienceCard = ({
   what,
   where,
   tools,
+  description
 }: ExperienceType) => {
   const theme = useTheme();
   return (
@@ -41,7 +42,7 @@ const ExperienceCard = ({
               </Typography>
               <ul className="list-disc ps-6">
                 <li>
-                  <Typography variant="body2">{tools}</Typography>
+                  <Typography variant="body2">Tools and Technologies: {tools}</Typography>
                 </li>
               </ul>
             </div>
