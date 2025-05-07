@@ -13,6 +13,7 @@ const ExperiencesCards = () => {
           where={exp.where}
           what={exp.what}
           tools={exp.tools}
+          description={exp.description}
           key={__index}
         />
       ))}
