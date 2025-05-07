@@ -41,7 +41,7 @@ const page = () => {
       {/* Formations */}
       <Box mb={6}>
         <Section title={"FORMATION"}>
-          <Grid container gap={2} justifyContent="space-evenly">
+          <Grid container gap={2} justifyContent="space-evenly" alignItems="center">
             {/* Gif */}
             <Grid item lg={5} xs={12} className="place-items-center">
               <img
